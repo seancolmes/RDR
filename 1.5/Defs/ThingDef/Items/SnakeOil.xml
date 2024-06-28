@@ -1,0 +1,40 @@
+<Defs>
+    <ThingDef ParentName="DrugPillBase">
+        <defName>RDR_SnakeOil</defName>
+        <label>snake oil</label>
+        <description>When consumed, Snake Oil refills the Dead Eye meter.\n
+It will take about three seconds to drink the Snake Oil, but the dead eye meter will become full directly after use.</description>
+        <tradeability>Sellable</tradeability>
+        <tickerType>Rare</tickerType>
+        <statBases>
+            <MarketValue>350</MarketValue>
+            <Mass>0.3</Mass>
+        </statBases>
+        <graphicData>
+            <texPath>RDR/Items/SnakeOil</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <minRewardCount>3</minRewardCount>
+        <ingestible>
+            <drugCategory>Medical</drugCategory>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>RDR_Focus_Hediff</hediffDef>
+                    <severity>1.00</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <addictiveness>0.0</addictiveness>
+                <needLevelOffset>0.0</needLevelOffset>
+                <listOrder>1010</listOrder>
+            </li>
+        </comps>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <thingSetMakerTags><li>RewardStandardCore</li></thingSetMakerTags>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- Pawn Class-->
+
+  <PawnKindDef Name="RDR_Pinkerton_Base" Abstract="True">
+    <race>Human</race>
+    <defaultFactionType>Pinkerton_Faction</defaultFactionType>
+ <backstoryFilters>
+<li><categories><li>Offworld</li></categories><commonality>0.7</commonality></li>
+<li><categories><li>Outlander</li></categories><commonality>0.3</commonality></li>
+</backstoryFilters> 
+    <invNutrition>2.55</invNutrition>
+    <itemQuality>Good</itemQuality>
+    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+    <maxGenerationAge>50</maxGenerationAge>
+<minGenerationAge>20</minGenerationAge>
+  </PawnKindDef>
+
+<!-- Pinkterton squad-->
+
+  <PawnKindDef Name="RDR_Pinkerton_Pawn_Detective" ParentName="RDR_Pinkerton_Base">
+    <defName>RDR_Pinkerton_Pawn_Detective</defName>
+    <label>Detective</label>
+	  <race>Human</race>
+    <combatPower>80</combatPower>
+    <itemQuality>Excellent</itemQuality>
+    <isFighter>false</isFighter>
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>2.0</max>
+    </gearHealthRange>
+    <weaponTags>
+      <li>SimpleGun</li>
+      <li>GrenadeDestructive</li>
+      <li>IndustrialMilitaryBasic</li>
+    </weaponTags>
+    <apparelTags>
+      <li>Outlander</li>
+      <li>IndustrialMilitaryBasic</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>RDR_PinkertonHatBeige</li>
+      <li>RDR_PinkertonDetective</li>
+    </apparelRequired>
+    <weaponMoney>
+      <min>300</min>
+      <max>800</max>
+    </weaponMoney>
+    <apparelMoney>
+      <min>300</min>
+      <max>1000</max>
+    </apparelMoney>
+    <apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+    <initialWillRange>3~5</initialWillRange>
+    <initialResistanceRange>10~15</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef Name="RDR_Deputy" ParentName="RDR_Pinkerton_Base">
+    <defName>RDR_Deputy</defName>
+    <label>Deputy</label>
+	  <race>Human</race>
+    <combatPower>60</combatPower>
+    <isFighter>true</isFighter>
+    <gearHealthRange>
+      <min>0.8</min>
+      <max>2</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>Outlander</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>400</min>
+      <max>800</max>
+    </apparelMoney>
+    <weaponTags>
+      <li>IndustrialMilitaryBasic</li>
+    </weaponTags>
+    <weaponMoney>
+      <min>200</min>
+      <max>600</max>
+    </weaponMoney>
+    <apparelRequired>
+      <li>RDR_PinkertonDeputy</li>
+      <li>RDR_PinkertonDeputyHat</li>
+    </apparelRequired>
+    <initialWillRange>3~5</initialWillRange>
+    <initialResistanceRange>10~15</initialResistanceRange>
+  </PawnKindDef>
+
+ <PawnKindDef Name="RDR_Pinkerton_Sheriff" ParentName="RDR_Pinkerton_Base">
+    <defName>RDR_Pinkerton_Sheriff</defName>
+    <label>Sheriff</label>
+	  <race>Human</race>
+    <combatPower>95</combatPower>
+    <isFighter>true</isFighter>
+    <gearHealthRange>
+      <min>0.6</min>
+      <max>2</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+      <li>Outlander</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>400</min>
+      <max>600</max>
+    </apparelMoney>
+    <weaponTags>
+      <li>SimpleGun</li>
+    </weaponTags>
+    <weaponMoney>
+      <min>200</min>
+      <max>800</max>
+    </weaponMoney>
+    <apparelRequired>
+      <li>RDR_SheriffHat</li>
+      <li>RDR_DustyDuster</li>
+      <li>RDR_SheriffOutfit</li>
+    </apparelRequired>
+    <apparelAllowHeadgearChance>0.7</apparelAllowHeadgearChance>
+    <initialWillRange>3~5</initialWillRange>
+    <initialResistanceRange>15~20</initialResistanceRange>
+  </PawnKindDef>
+
+
+  <PawnKindDef Name="RDR_MrPinky" ParentName="RDR_Pinkerton_Base">
+    <defName>RDR_MrPinky</defName>
+    <label>Boss Man Pinky</label>
+    <labelPlural>Big Pink</labelPlural>
+	  <race>Human</race>
+    <combatPower>120</combatPower>
+    <factionLeader>true</factionLeader>
+    <minGenerationAge>30</minGenerationAge>
+    <isFighter>true</isFighter>
+    <gearHealthRange>1~1</gearHealthRange>
+    <itemQuality>Good</itemQuality>
+    <weaponMoney>355~1000</weaponMoney>
+    <weaponTags>
+      <li>IndustrialGunAdvanced</li>
+    </weaponTags>
+    <apparelMoney>5000~8000</apparelMoney>
+    <apparelTags>
+      <li>IndustrialMilitaryBasic</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelRequired>
+    </apparelRequired>
+    <techHediffsChance>0.15</techHediffsChance>
+    <techHediffsMoney>600~1500</techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <initialWillRange>3~5</initialWillRange>
+    <initialResistanceRange>24~35</initialResistanceRange>
+  </PawnKindDef>
+
+
+</Defs>
