@@ -1,2 +1,2 @@
 # RDR
-Rimworld Mod inspired by Cockstars, RDR.
+Rimworld Mod inspired by Rockstars, RDR.
