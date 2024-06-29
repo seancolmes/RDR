@@ -81,7 +81,7 @@
             <baseBodySize>3</baseBodySize>
             <baseHealthScale>3.2</baseHealthScale>
             <foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
-            <leatherDef>Leather_Bear</leatherDef>
+            <leatherDef>RDR_LegendaryBearPelt</leatherDef>
             <gestationPeriodDays>12</gestationPeriodDays>
             <wildness>0.90</wildness>
             <lifeExpectancy>35</lifeExpectancy>
