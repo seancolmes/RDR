@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<ThingDef ParentName="ResourceBase">
+  <defName>RDR_LegendaryBearPelt</defName>
+  <label>Legendary Bear Pelt</label>
+  <description>A thick, warm pelt taken from a huge bear. Perfect for crafting sturdy apparel or selling for a good price.</description>
+  <graphicData>
+    <texPath>Things/Item/Resource/LegendaryBearPelt</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <drawSize>(1.0, 1.0)</drawSize>
+  </graphicData>
+  <statBases>
+    <MarketValue>25</MarketValue>
+    <Mass>0.8</Mass>
+  </statBases>
+  <thingCategories>
+    <li>ResourcesRaw</li>
+  </thingCategories>
+  <tradeTags>
+    <li>AnimalProduct</li>
+    <li>Leather</li>
+  </tradeTags>
+  <stuffProps>
+    <categories>
+      <li>Leathery</li>
+    </categories>
+    <statOffsets>
+    </statOffsets>
+  </stuffProps>
+</ThingDef>
+
+</Defs>
