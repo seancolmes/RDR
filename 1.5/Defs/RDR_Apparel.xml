@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
 
-<!-- ============== PONCHOS =============== -->
+<!--Ponchos-->
 
-
-<!-- ========== Dustrider ========== -->
+<!--Dustrider-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_DustRider</defName>
     <label>DustRider</label>
     <description>Made for the rugged rider who braves storms and sunsets alike. Keeps the dust off and the adventure on.</description>
+    <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/DustRider/DustRider</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+      <drawSize>1.0</drawSize>
     </graphicData>
     <costStuffCount>75</costStuffCount>
     <stuffCategories>
     <li>Fabric</li>
     <li>Leathery</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
     <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
-      <WorkToMake>6500</WorkToMake>
-      <Mass>1</Mass>
-      <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
-      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
-      <StuffEffectMultiplierInsulation_Cold>0</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>2.0</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>0.5</EquipDelay>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>16000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.85</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <RangedWeapon_Cooldown>0.2</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
       <CaravanRidingSpeedFactor>0.10</CaravanRidingSpeedFactor>
     </equippedStatOffsets>
     <thingCategories>
@@ -50,11 +50,14 @@
         <li>Arms</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/DustRider/DustRider</wornGraphicPath>
-      <shellRenderedBehindHead>True</shellRenderedBehindHead>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
       <layers>
         <li>Shell</li>
       </layers>
       <tags>
+        <li>RDR_Ponchos</li>
         <li>IndustrialBasic</li>
       </tags>
       <defaultOutfitTags>
@@ -63,9 +66,6 @@
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -75,7 +75,7 @@
   </ThingDef>
 
 
-  <!-- ========== Trappers Poncho ========== -->
+  <!-- Trappers Poncho -->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_TrappersPoncho</defName>
     <label>Trappers Poncho</label>
@@ -85,23 +85,28 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <onGroundRandomRotateAngle>15</onGroundRandomRotateAngle>
+      <drawSize>1.0</drawSize>
     </graphicData>
     <costStuffCount>150</costStuffCount>
     <stuffCategories>
       <li>Leathery</li>
+      <li>Fabric</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
     <costList>
     </costList>
     <statBases>
+    <!--Basically a Flak Jacket, Cape, Parka-->
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>9000</WorkToMake>
-      <Mass>2</Mass>
-      <StuffEffectMultiplierArmor>1</StuffEffectMultiplierArmor>
-      <ArmorRating_Blunt>1</ArmorRating_Blunt>
-      <ArmorRating_Sharp>1</ArmorRating_Sharp>
-      <StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
-      <EquipDelay>2</EquipDelay>
+      <WorkToMake>14000</WorkToMake>
+      <Mass>7</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.20</ArmorRating_Heat>
+      <Insulation_Cold>14.4</Insulation_Cold> <!-- like a cloth jacket -->
+      <Insulation_Heat>3</Insulation_Heat>
+      <EquipDelay>3</EquipDelay>
     </statBases>
     <equippedStatOffsets>
     <MoveSpeed>-0.5</MoveSpeed>
@@ -120,13 +125,16 @@
         <li>Torso</li>
         <li>Neck</li>
         <li>Shoulders</li>
+        <li>Arms</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/TrappersPoncho/TrappersPoncho</wornGraphicPath>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
       <shellRenderedBehindHead>True</shellRenderedBehindHead>
       <layers>
         <li>Shell</li>
       </layers>
       <tags>
+        <li>RDR_Ponchos</li>
         <li>IndustrialBasic</li>
       </tags>
       <defaultOutfitTags>
@@ -147,7 +155,7 @@
   </ThingDef>
   
 
-<!-- ========== Fur Poncho ========== -->
+<!--Fur Poncho -->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_FurPoncho</defName>
     <label>Fur Poncho</label>
@@ -157,6 +165,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+      <drawSize>1.2</drawSize>
     </graphicData>
     <costStuffCount>75</costStuffCount>
     <stuffCategories>
@@ -165,13 +174,14 @@
     <costList>
     </costList>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>6500</WorkToMake>
-      <Mass>0.5</Mass>
-      <StuffEffectMultiplierArmor>0.10</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>2</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>-0.50</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>0.3</EquipDelay>
+    <!--Good for cold not heat-->
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>2.0</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>-0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
@@ -187,6 +197,7 @@
         <li>Torso</li>
         <li>Neck</li>
         <li>Shoulders</li>
+        <li>Arms</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/FurPoncho/FurPoncho</wornGraphicPath>
       <shellRenderedBehindHead>True</shellRenderedBehindHead>
@@ -194,7 +205,9 @@
         <li>Shell</li>
       </layers>
       <tags>
+        <li>Neolithic</li>
         <li>IndustrialBasic</li>
+        <li>RDR_Poncho</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
@@ -214,17 +227,16 @@
   </ThingDef>
 
 
+<!--Hats-->
 
-  <!-- ============== HATS =============== -->
 
-
-   <!--Pinkerton Hat-->
-  <ThingDef ParentName="ApparelMakeableBase">
-    <defName>RDR_PinkertonHatBeige</defName>
-    <label>Pinkerton Hat</label>
-    <description>A Pinkerton Detectives Hat. It seems to have a way of making people talk as well as making them listen.</description>
+<!--Pinkerton Deputy Hat-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>RDR_PinkertonDeputyHat</defName>
+    <label>Pinkerton Deputy Hat</label>
+    <description>Not quite as imposing as a sheriff's hat, but it still says, "I'm here to keep the peace." Wear it with pride and watch out for those bandits.</description>
     <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/PinkertonHatBeige/PinkertonDetectiveHat</texPath>
+      <texPath>Things/Pawn/Humanlike/Apparel/PinkertonDeputyHat/PinkertonDeputyHat</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>1.0</drawSize>
@@ -233,85 +245,30 @@
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
-    <tradeTags>
-      <li>Clothing</li>
-    </tradeTags>
+    <costList>
+      <Plasteel>25</Plasteel>
+    </costList>
+    <tradeability>None</tradeability>
     <statBases>
-      <MaxHitPoints>180</MaxHitPoints>
-      <WorkToMake>5000</WorkToMake>
-      <Mass>0.2</Mass>
-      <StuffEffectMultiplierArmor>0.10</StuffEffectMultiplierArmor>
+   <!--Slightly better than a flak helmet-->
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>1.2</Mass>
+      <StuffEffectMultiplierArmor>0.6</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <SocialImpact>1.5</SocialImpact>
+      <ArrestSuccessChance>0.5</ArrestSuccessChance>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PinkertonHatBeige/PinkertonDetectiveHat</wornGraphicPath>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PinkertonDeputyHat/PinkertonDeputyHat</wornGraphicPath>
       <useWornGraphicMask>true</useWornGraphicMask>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>IndustrialBasic</li>
-        <li>IndustrialAdvanced</li>
-      </tags>
-    </apparel>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
-      <recipeUsers>
-        <li>ElectricTailoringBench</li>
-        <li>HandTailoringBench</li>
-      </recipeUsers>
-    </recipeMaker>
-    <colorGenerator Class="ColorGenerator_StandardApparel" />
-  </ThingDef>
-
-<!--Marshal Hat-->
-  <ThingDef ParentName="ApparelMakeableBase">
-    <defName>RDR_MarshalHat</defName>
-    <label>Marshals hat</label>
-    <description>Top off your lawman look with this wide-brimmed hat. Perfect for shading your eyes from the sun and glaring at outlaws.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/MarshalHat/MarshalHat</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <drawSize>1.0</drawSize>
-    </graphicData>
-    <costStuffCount>100</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-      <li>Leathery</li>
-    </stuffCategories>
-    <tradeability>Sellable</tradeability>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
-    <tradeTags>
-      <li>Clothing</li>
-    </tradeTags>
-    <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
-      <WorkToMake>4500</WorkToMake>
-      <Mass>0.2</Mass>
-      <StuffEffectMultiplierArmor>0.50</StuffEffectMultiplierArmor>
-    </statBases>
-    <equippedStatOffsets>
-      <NegotiationAbility>0.5</NegotiationAbility>
-    </equippedStatOffsets>
-    <apparel>
-      <bodyPartGroups>
-        <li>UpperHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/MarshalHat/MarshalHat</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -320,6 +277,7 @@
       </tags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <skillRequirements>
         <Crafting>5</Crafting>
       </skillRequirements>
@@ -331,9 +289,132 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-<!--TrappersHat-->
 
-  <ThingDef ParentName="ApparelMakeableBase">
+   <!--Pinkerton Detective Hat-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>RDR_PinkertonHatBeige</defName>
+    <label>Pinkerton Hat</label>
+    <description>A Pinkerton Detectives Hat. It seems to have a way of making people talk as well as making them listen.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/PinkertonHatBeige/PinkertonDetectiveHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <Plasteel>25</Plasteel>
+    </costList>
+    <tradeability>None</tradeability>
+   <statBases>
+   <!--Slightly better than a flak helmet-->
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>1.2</Mass>
+      <StuffEffectMultiplierArmor>0.7</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.50</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PinkertonHatBeige/PinkertonDetectiveHat</wornGraphicPath>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>RDRLawmen</li>
+      </tags>
+    </apparel>
+    <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+
+
+<!--Marshal Hat-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>RDR_MarshalHat</defName>
+    <label>Marshals hat</label>
+    <description>Top off your lawman look with this wide-brimmed hat. Perfect for shading your eyes from the sun and glaring at outlaws.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/MarshalHat/MarshalHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <Plasteel>25</Plasteel>
+    </costList>
+    <tradeability>None</tradeability>
+    <tradeTags>
+      <li>Clothing</li>
+      <li>Armor</li>
+    </tradeTags>
+   <statBases>
+   <!--Slightly better than a pinkerton detective hat-->
+      <WorkToMake>8500</WorkToMake>
+      <MaxHitPoints>125</MaxHitPoints>
+      <Mass>1.3</Mass>
+      <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <NegotiationAbility>0.5</NegotiationAbility>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/MarshalHat/MarshalHat</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>RDRLawmen</li>
+      </tags>
+    </apparel>
+    <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+
+
+<!--TrappersHat-->
+  <ThingDef ParentName="HatMakeableBase">
     <defName>RDR_TrappersHat</defName>
     <label>Trappers Hat</label>
     <description>Keep your head warm and your look wild with this rugged fur hat. Perfect for blending into the wilderness or standing out in town</description>
@@ -349,15 +430,17 @@
       <li>Leathery</li>
     </stuffCategories>
     <tradeability>Sellable</tradeability>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
+    <tradeTags>
+      <li>Clothing</li>
+      <li>Armor</li>
+    </tradeTags>
     <statBases>
+    <!-- basically a simple helmet with good cold insulation-->
       <MaxHitPoints>150</MaxHitPoints>
-      <WorkToMake>5500</WorkToMake>
-      <Mass>0.4</Mass>
+      <WorkToMake>4500</WorkToMake>
+      <Mass>1.2</Mass>
       <StuffEffectMultiplierArmor>0.50</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Cold>1.2</StuffEffectMultiplierInsulation_Cold>
       <EquipDelay>0.5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
@@ -370,14 +453,18 @@
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/TrappersHat/TrappersHat</wornGraphicPath>
       <useWornGraphicMask>false</useWornGraphicMask>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
         <li>IndustrialBasic</li>
+        <li>Neolithic</li>
+        <li>TrapperGear</li>
       </tags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
@@ -389,9 +476,9 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-  <!--Gentleman Hat-->
 
-  <ThingDef ParentName="ApparelMakeableBase">
+<!--Gentleman Hat-->
+  <ThingDef ParentName="HatMakeableBase">
     <defName>RDR_GentlemanHat</defName>
     <label>Gentleman Hat</label>
     <description>Elevate your style with this refined headwear. Whether tipping it to a lady or keeping the sun out of your eyes, this hat says you mean business with a touch of class.</description>
@@ -404,22 +491,24 @@
     <costStuffCount>75</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
+      <li>Leathery</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
+    <tradeability>All</tradeability>
     <tradeTags>
       <li>Clothing</li>
     </tradeTags>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>3500</WorkToMake>
-      <Mass>0.3</Mass>
+    <!-- Basically a bowler hat-->
+      <WorkToMake>1800</WorkToMake>
+      <Mass>0.21</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.40</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.8</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.10</SocialImpact>
-      <TradePriceImprovement>0.3</TradePriceImprovement>
+      <TradePriceImprovement>0.5</TradePriceImprovement>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
@@ -427,17 +516,18 @@
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/GentlemanHat/GentlemanHat</wornGraphicPath>
       <useWornGraphicMask>false</useWornGraphicMask>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
         <li>IndustrialBasic</li>
+        <li>RDRHats</li>
+        <li>Western</li>
       </tags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>6</Crafting>
-      </skillRequirements>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -446,9 +536,9 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-<!--Straw Hat-->
 
-  <ThingDef ParentName="ApparelMakeableBase">
+<!--Straw Hat-->
+  <ThingDef ParentName="HatMakeableBase">
     <defName>RDR_StrawHat</defName>
     <label>Straw Hat</label>
     <description>Embrace the sun with rustic charm. This hat keeps your head cool and your style breezy, perfect for lazy afternoons on the porch or tending to your crops.</description>
@@ -458,45 +548,47 @@
       <shaderType>CutoutComplex</shaderType>
       <drawSize>1.0</drawSize>
     </graphicData>
-    <costStuffCount>100</costStuffCount>
+    <costStuffCount>25</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
+    <tradeability>All</tradeability>
     <tradeTags>
       <li>Clothing</li>
     </tradeTags>
     <statBases>
-      <MaxHitPoints>75</MaxHitPoints>
-      <WorkToMake>1000</WorkToMake>
-      <Mass>0.1</Mass>
-      <EquipDelay>0.1</EquipDelay>
+    <!--A shadecone with more heat insulation-->
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>1800</WorkToMake>
+      <Mass>0.14</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.8</EquipDelay>
     </statBases>
     <equippedStatOffsets>
     <PlantWorkSpeed>0.25</PlantWorkSpeed>
     <AnimalGatherSpeed>0.05</AnimalGatherSpeed>
-    <SocialImpact>-0.10</SocialImpact>
     </equippedStatOffsets>
+    <costList>
+      <Hay>50</Hay>
+    </costList>
     <apparel>
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/StrawHat/StrawHat</wornGraphicPath>
       <useWornGraphicMask>true</useWornGraphicMask>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
         <li>IndustrialBasic</li>
+        <li>Western</li>
       </tags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -505,65 +597,9 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-  <!--Pinkerton Deputy Hat-->
 
-  <ThingDef ParentName="ApparelMakeableBase">
-    <defName>RDR_PinkertonDeputyHat</defName>
-    <label>Pinkerton Deputy Hat</label>
-    <description>Not quite as imposing as a sheriff's hat, but it still says, "I'm here to keep the peace." Wear it with pride and watch out for those bandits.</description>
-    <graphicData>
-      <texPath>Things/Pawn/Humanlike/Apparel/PinkertonDeputyHat/PinkertonDeputyHat</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <drawSize>1.0</drawSize>
-    </graphicData>
-    <costStuffCount>100</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-    </stuffCategories>
-    <tradeability>Sellable</tradeability>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
-    <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
-      <WorkToMake>5800</WorkToMake>
-      <Mass>0.25</Mass>
-      <StuffEffectMultiplierArmor>0.10</StuffEffectMultiplierArmor>
-      <EquipDelay>0.5</EquipDelay>
-      <Beauty>3</Beauty>
-    </statBases>
-    <equippedStatOffsets>
-      <ArrestSuccessChance>0.5</ArrestSuccessChance>
-    </equippedStatOffsets>
-    <apparel>
-      <bodyPartGroups>
-        <li>UpperHead</li>
-      </bodyPartGroups>
-      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PinkertonDeputyHat/PinkertonDeputyHat</wornGraphicPath>
-      <useWornGraphicMask>true</useWornGraphicMask>
-      <layers>
-        <li>Overhead</li>
-      </layers>
-      <tags>
-        <li>IndustrialBasic</li>
-      </tags>
-    </apparel>
-    <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
-      <recipeUsers>
-        <li>ElectricTailoringBench</li>
-        <li>HandTailoringBench</li>
-      </recipeUsers>
-    </recipeMaker>
-    <colorGenerator Class="ColorGenerator_StandardApparel" />
-  </ThingDef>
-
-  <!--Armadillo Hat-->
-
-  <ThingDef ParentName="ApparelMakeableBase">
+<!--Armadillo Hat-->
+  <ThingDef ParentName="HatMakeableBase">
     <defName>RDR_ArmadilloHat</defName>
     <label>Armadillo Hat</label>
     <description>Tough as nails and just as sharp. This hat's perfect for those who need their noggin to stay as protected as their reputation</description>
@@ -577,23 +613,23 @@
     <stuffCategories>
       <li>Leathery</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
+    <tradeability>All</tradeability>
     <tradeTags>
       <li>Clothing</li>
     </tradeTags>
-    <statBases>
+     <statBases>
+     <!--slightly weaker version of simple helmet-->
+      <WorkToMake>3200</WorkToMake>
       <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>2500</WorkToMake>
-      <Mass>0.25</Mass>
-      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>0.5</EquipDelay>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.05</SocialImpact>
-      <CaravanRidingSpeedFactor>0.05</CaravanRidingSpeedFactor>
+      <GeneralLaborSpeed>0.10</GeneralLaborSpeed>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
@@ -601,17 +637,18 @@
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/ArmadilloHat/ArmadilloHat</wornGraphicPath>
       <useWornGraphicMask>false</useWornGraphicMask>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
         <li>IndustrialBasic</li>
+        <li>RDRHats</li>
+        <li>Western</li>
       </tags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -621,9 +658,8 @@
   </ThingDef>
 
 
-   <!-- ========== Stetson ========== -->
-
-  <ThingDef ParentName="ApparelMakeableBase">
+<!--Stetson Hat -->
+<ThingDef ParentName="HatMakeableBase">
     <defName>RDR_Stetson</defName>
     <label>Stetson</label>
     <description>A classic cowboy hat that says you're ready for adventure on the frontier. Stylish enough for town, rugged enough for the trail.</description>
@@ -637,7 +673,7 @@
     <stuffCategories>
       <li>Leathery</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
     <thingCategories>
       <li>Apparel</li>
     </thingCategories>
@@ -645,17 +681,16 @@
       <li>Clothing</li>
     </tradeTags>
     <statBases>
+    <!--Almost similar to simple helmet-->
+      <WorkToMake>3200</WorkToMake>
       <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>10000</WorkToMake>
-      <Mass>0.50</Mass>
-      <StuffEffectMultiplierArmor>0.50</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.1</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>1.0</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>0.5</EquipDelay>
-      <Beauty>5</Beauty>
+      <Mass>1.5</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <Beauty>5</Beauty>
       <CaravanRidingSpeedFactor>0.50</CaravanRidingSpeedFactor>
     </equippedStatOffsets>
     <apparel>
@@ -663,17 +698,17 @@
         <li>UpperHead</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Stetson/Stetson</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
         <li>IndustrialBasic</li>
+        <li>RDRHats</li>
+        <li>Western</li>
       </tags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -681,10 +716,10 @@
     </recipeMaker>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
+   
 
-   <!-- ========== BearHat ========== -->
-
-  <ThingDef ParentName="ApparelMakeableBase">
+   <!--Legendary Bear Hat-->
+  <ThingDef ParentName="HatMakeableBase">
     <defName>RDR_BearHat</defName>
     <label>Bear Hat</label>
     <description>Crafted from the toughest hide the frontier has to offer. Wear it with pride and intimidate even the bravest outlaws.</description>
@@ -698,25 +733,24 @@
     <stuffCategories>
       <li>Leathery</li>
     </stuffCategories>
+    <tradeability>Sellable</tradeability>
     <costList>
       <RDR_LegendaryBearPelt>30</RDR_LegendaryBearPelt>
     </costList>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>10000</WorkToMake>
-      <Mass>1</Mass>
-      <StuffEffectMultiplierArmor>1.0</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>0.8</EquipDelay>
-      <Beauty>5</Beauty>
+    <!--Basically a recon helmet with better insulation-->
+      <WorkToMake>21000</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>1</Insulation_Heat>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.5</SocialImpact>
-      <MoveSpeed>0.5</MoveSpeed>
       <MentalBreakThreshold>0.15</MentalBreakThreshold>
     </equippedStatOffsets>
     <apparel>
@@ -724,14 +758,16 @@
         <li>UpperHead</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/BearHat/BearHat</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
-        <li>IndustrialBasic</li>
+        <li>RDR_LegendaryGear</li>
       </tags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>
@@ -743,8 +779,8 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-  <!-- ========== Bandana ========== -->
 
+<!--Bandana-->
   <ThingDef ParentName="HatMakeableBase">
     <defName>RDR_Bandana</defName>
     <label>Bandit Bandana</label>
@@ -753,22 +789,21 @@
       <texPath>Things/Pawn/Humanlike/Apparel/BanditBandana/BanditBandana</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <techLevel>Industrial</techLevel>
-    <tradeability>Sellable</tradeability>
-    <costStuffCount>35</costStuffCount>
+    <tradeability>All</tradeability>
+    <costStuffCount>50</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>1200</WorkToMake>
+      <WorkToMake>2500</WorkToMake>
       <Mass>0.08</Mass>
-      <StuffEffectMultiplierInsulation_Heat>0</StuffEffectMultiplierInsulation_Heat>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>0.8</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <ToxicResistance>0.05</ToxicResistance>
+      <ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.05</ToxicEnvironmentResistance>
       <SocialImpact>-0.05</SocialImpact>
     </equippedStatOffsets>
     <thingCategories Inherit="False">
@@ -782,11 +817,12 @@
         <li>Teeth</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/BanditBandana/BanditBandana</wornGraphicPath>
+      <useWornGraphicMask>true</useWornGraphicMask>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
-        <li>IndustrialBasic</li>
+        <li>Outlaws</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
@@ -794,8 +830,7 @@
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
-      <researchPrerequisite>ComplexClothing</researchPrerequisite>
-      <recipeUsers Inherit="False">
+      <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
       </recipeUsers>
@@ -803,9 +838,9 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-   <!-- ========== FrontierHat ========== -->
 
-  <ThingDef ParentName="ApparelMakeableBase">
+<!--FrontierHat -->
+  <ThingDef ParentName="HatMakeableBase">
     <defName>RDR_FrontierHat</defName>
     <label>FrontierHat</label>
     <description>Made for those who live on the edge of the wild. It's rugged, stylish, and ready for any adventure the frontier throws your way.</description>
@@ -818,19 +853,22 @@
     <costStuffCount>75</costStuffCount>
     <stuffCategories>
       <li>Leathery</li>
+      <li>Fabric</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
-    <thingCategories>
-      <li>Apparel</li>
-    </thingCategories>
+    <tradeability>All</tradeability>
     <tradeTags>
       <li>Clothing</li>
     </tradeTags>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
     <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
+      <MaxHitPoints>100</MaxHitPoints>
       <WorkToMake>4500</WorkToMake>
       <Mass>0.25</Mass>
       <EquipDelay>0.5</EquipDelay>
+      <StuffEffectMultiplierInsulation_Cold>1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
     </statBases>
     <equippedStatOffsets>
       <TrainAnimalChance>0.2</TrainAnimalChance>
@@ -841,18 +879,17 @@
         <li>UpperHead</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/FrontierHat/FrontierHat</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
         <li>IndustrialBasic</li>
-        <li>IndustrialAdvanced</li>
+        <li>RDRHats</li>
+        <li>Western</li>
       </tags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -861,11 +898,11 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
- <!-- ========== Sheriff hat ========== -->
 
-  <ThingDef ParentName="ApparelMakeableBase">
+<!--Sheriff hat-->
+  <ThingDef ParentName="HatMakeableBase">
     <defName>RDR_SheriffHat</defName>
-    <label>Sheriff Hatt</label>
+    <label>Sheriff Hat</label>
     <description>The unmistakable crown of authority. Wear it to cast a long shadow and let everyone know justice is in town.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/SheriffHat/SheriffHat</texPath>
@@ -873,45 +910,43 @@
       <shaderType>CutoutComplex</shaderType>
       <drawSize>1.0</drawSize>
     </graphicData>
-    <costStuffCount>50</costStuffCount>
+    <costStuffCount>75</costStuffCount>
     <stuffCategories>
       <li>Leathery</li>
+      <li>Fabric</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>None</tradeability>
     <thingCategories>
       <li>Apparel</li>
     </thingCategories>
-    <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
-      <WorkToMake>3500</WorkToMake>
-      <Mass>0.25</Mass>
-      <StuffEffectMultiplierArmor>0.50</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>0.5</EquipDelay>
-      <Beauty>5</Beauty>
+      <statBases>
+   <!--Slightly worse than a marshal hat-->
+      <WorkToMake>7500</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>1.0</Mass>
+      <StuffEffectMultiplierArmor>0.6</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
     <ArrestSuccessChance>0.50</ArrestSuccessChance>
     </equippedStatOffsets>
     <apparel>
-    <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/SheriffHat/SheriffHat</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
-        <li>IndustrialBasic</li>
-        <li>IndustrialAdvanced</li>
+        <li>RDRSheriff</li>
       </tags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -920,10 +955,9 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-  
-  <!-- ========== Fedora ========== -->
 
-  <ThingDef ParentName="ApparelMakeableBase">
+   <!--Fedora-->
+  <ThingDef ParentName="HatMakeableBase">
     <defName>RDR_Fedora</defName>
     <label>Fancy Fedora</label>
     <description>A touch of urban sophistication on the dusty trails of the frontier. Perfect for the sharp-dressed wanderer who blends city style with frontier grit.</description>
@@ -938,18 +972,22 @@
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
+    <tradeTags>
+      <li>ComplexClothing</li>
+    </tradeTags>
     <thingCategories>
       <li>Apparel</li>
     </thingCategories>
-    <tradeTags>
-      <li>Clothing</li>
-    </tradeTags>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>3500</WorkToMake>
-      <Mass>0.25</Mass>
-      <EquipDelay>0.2</EquipDelay>
+    <!--a glorified flophat-->
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>1200</WorkToMake>
+      <Mass>0.07</Mass>
+      <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.8</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.5</SocialImpact>
@@ -959,18 +997,18 @@
         <li>UpperHead</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Fedora/Fedora</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
         <li>IndustrialBasic</li>
-        <li>IndustrialAdvanced</li>
+        <li>RDRHats</li>
+        <li>Western</li>
       </tags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -979,8 +1017,8 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-<!-- ========== Derby Hat ========== -->
 
+<!--Derby Hat-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_DerbyHat</defName>
     <label>DerbyHat</label>
@@ -1000,34 +1038,38 @@
       <li>Apparel</li>
     </thingCategories>
     <tradeTags>
-      <li>Clothing</li>
+      <li>ComplexClothing</li>
     </tradeTags>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>4800</WorkToMake>
-      <Mass>0.25</Mass>
-      <EquipDelay>0.5</EquipDelay>
+    <!--nothing special here-->
+       <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>2800</WorkToMake>
+      <Mass>0.07</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.8</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <SocialImpact>0.3</SocialImpact>
+      <SocialImpact>0.5</SocialImpact>
     </equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/DerbyHat/DerbyHat</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Overhead</li>
       </layers>
       <tags>
         <li>IndustrialBasic</li>
-        <li>IndustrialAdvanced</li>
+        <li>RDRHats</li>
+        <li>Western</li>
       </tags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -1036,8 +1078,8 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-  <!-- ========== Bandolier ========== -->
-
+ 
+  <!--Bandolier-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_Bandolier</defName>
     <label>Bandolier Pouch</label>
@@ -1052,8 +1094,9 @@
     <stuffCategories>
       <li>Leathery</li>
     </stuffCategories>
+    <tradeability>Buyable</tradeability>
     <costList>
-      <Steel>25</Steel>
+      <Steel>50</Steel>
     </costList>
     <statBases>
       <MaxHitPoints>125</MaxHitPoints>
@@ -1062,39 +1105,39 @@
       <StuffEffectMultiplierArmor>0.10</StuffEffectMultiplierArmor>
       <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
-      <StuffEffectMultiplierInsulation_Cold>0.01</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.01</StuffEffectMultiplierInsulation_Heat>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>2.2</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <RangedWeapon_Cooldown>-0.2</RangedWeapon_Cooldown>
+      <RangedCooldownFactor>-0.8</RangedCooldownFactor>
       <AimingDelayFactor>0.2</AimingDelayFactor>
     </equippedStatOffsets>
     <thingCategories>
-      <li>ApparelMisc</li>
+      <li>ApparelUtility</li>
     </thingCategories>
     <apparel>
       <bodyPartGroups>
-        <li>Shoulders</li>
         <li>Waist</li>
+        <li>Shoulders</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Bandolier/BandolierPouch</wornGraphicPath>
       <useWornGraphicMask>true</useWornGraphicMask>
       <layers>
-        <li>Shell</li>
+      <!--sucks because i have to set shit from middle to onskin now. I wish belts rendered in front of pawn. Eventually Ill redraw the bandolier as a utility.-->
+        <li>Middle</li>
       </layers>
       <tags>
         <li>IndustrialBasic</li>
-        <li>IndustrialAdvanced</li>
+        <li>Western</li>
+        <li>RDRApparel</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -1103,17 +1146,13 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
     <tradeTags>
       <li>Armor</li>
+      <li>ComplexClothing</li>
     </tradeTags>
-  </ThingDef>
+  </ThingDef> -->
 
+<!--Skin-->
 
-
-<!-- ============== SKIN =============== -->
-
-  
-
-<!-- ========== The Gentleman ========== -->
-
+ <!--The Gentleman-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_TheGentleman</defName>
     <label>The Gentleman</label>
@@ -1122,13 +1161,15 @@
       <texPath>Things/Pawn/Humanlike/Apparel/TheGentleman/TheGentleman</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <techLevel>Industrial</techLevel>
     <costStuffCount>80</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>Buyable</tradeability>
+    <tradeTags>
+      <li>ComplexClothing</li>
+    </tradeTags>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
       <WorkToMake>6800</WorkToMake>
@@ -1147,6 +1188,9 @@
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/TheGentleman/TheGentleman</wornGraphicPath>
       <layers>
@@ -1154,24 +1198,20 @@
       </layers>
       <tags>
         <li>IndustrialBasic</li>
-        <li>IndustrialAdvanced</li>
+        <li>RDRApparel</li>
       </tags>
     </apparel>
     <recipeMaker>
-    <skillRequirements>
-    <Crafting>9</Crafting>
-    </skillRequirements>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
-        <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
    <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-  <!-- ========== Marshal Vest ========== -->
-
+<!--Marshal Vest-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_MarshalsVest</defName>
     <label>Marshals Vest</label>
@@ -1182,6 +1222,7 @@
     </graphicData>
     <techLevel>Industrial</techLevel>
     <costStuffCount>80</costStuffCount>
+    <tradeability>None</tradeability>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -1189,52 +1230,59 @@
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
       <WorkToMake>5800</WorkToMake>
-      <Mass>1</Mass>
+      <Mass>1.5</Mass>
       <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.62</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.58</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>1</EquipDelay>
+      <StuffEffectMultiplierInsulation_Cold>0.80</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.8</EquipDelay>
     </statBases>
+    <equippedStatOffsets>
+    <RangedCooldownFactor>-0.15</RangedCooldownFactor>
+    </equippedStatOffsets>
     <thingCategories>
       <li>Apparel</li>
     </thingCategories>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/MarshalsVest/MarshalsVest</wornGraphicPath>
       <layers>
         <li>OnSkin</li>
       </layers>
       <tags>
-      <li>IndustrialBasic</li>
-      <li>IndustrialAdvanced</li>
+      <li>RDRLawmen</li>
       </tags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
     <skillRequirements>
-        <Crafting>9</Crafting>
+        <Crafting>5</Crafting>
       </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
-        <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
    <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-  <!-- ========== Sheriff Outfit ========== -->
 
+ <!--Sheriff outfit-->
 <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_SheriffOutfit</defName>
     <label>Sheriff Outfit</label>
-    <description>Decked out from hat to boots, this ensemble means business. Perfect for corralling bandits or charming the local saloon.</description>
+    <description>The sheriff wears this like its some kind of uniform. Perfect for corralling bandits or charming the local saloon.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/SheriffOutfit/SheriffOutfit</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <techLevel>Industrial</techLevel>
+    <tradeability>None</tradeability>
+    <tradeTags>
+      <li>ComplexClothing</li>
+    </tradeTags>
     <costStuffCount>80</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
@@ -1245,8 +1293,8 @@
       <WorkToMake>4800</WorkToMake>
       <Mass>1</Mass>
       <StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.62</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.58</StuffEffectMultiplierInsulation_Heat>
+      <StuffEffectMultiplierInsulation_Cold>1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1.2</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>1</EquipDelay>
     </statBases>
     <equippedStatOffsets>
@@ -1258,31 +1306,35 @@
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/SheriffOutfit/SheriffOutfit</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>OnSkin</li>
       </layers>
       <tags>
-      <li>IndustrialBasic</li>
-      <li>IndustrialAdvanced</li>
+      <li>RDRSheriff</li>
       </tags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>5</Crafting>
       </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
-        <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
    <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-<!-- ========== Silk Vest ========== -->
 
+<!--Silk Vest-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_SilkVest</defName>
     <label>Silk Vest</label>
@@ -1291,20 +1343,23 @@
       <texPath>Things/Pawn/Humanlike/Apparel/SilkVest/SilkVest</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <techLevel>Industrial</techLevel>
     <costStuffCount>80</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
+    <tradeTags>
+      <li>ComplexClothing</li>
+    </tradeTags>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
       <WorkToMake>4800</WorkToMake>
-      <Mass>0.80</Mass>
-      <StuffEffectMultiplierInsulation_Cold>0.62</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.58</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>1.5</EquipDelay>
+      <Mass>1</Mass>
+      <StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.80</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.60</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
     </statBases>
     <equippedStatOffsets>
     <SocialImpact>0.50</SocialImpact>
@@ -1312,36 +1367,34 @@
     <thingCategories>
       <li>Apparel</li>
     </thingCategories>
-    <tradeTags>
-      <li>Clothing</li>
-    </tradeTags>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/SilkVest/SilkVest</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>OnSkin</li>
       </layers>
       <tags>
+      <li>Western</li>
+      <li>RDRApparel</li>
       <li>IndustrialBasic</li>
-      <li>IndustrialAdvanced</li>
       </tags>
     </apparel>
     <recipeMaker>
-    <skillRequirements>
-    <Crafting>6</Crafting>
-    </skillRequirements>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
-        <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
    <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-  <!-- ========== Armadillo ========== -->
+  <!--Armadillo-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_Armadillo</defName>
     <label>Armadillo</label>
@@ -1349,6 +1402,7 @@
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/Armadillo/Armadillo</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.05</drawSize>
     </graphicData>
     <techLevel>Industrial</techLevel>
     <costStuffCount>75</costStuffCount>
@@ -1356,10 +1410,13 @@
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
       <WorkToMake>3500</WorkToMake>
+      <StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.80</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.60</StuffEffectMultiplierInsulation_Heat>
       <Mass>0.50</Mass>
       <EquipDelay>1</EquipDelay>
     </statBases>
@@ -1371,32 +1428,35 @@
       <li>Apparel</li>
     </thingCategories>
     <tradeTags>
-      <li>Clothing</li>
+      <li>ComplexClothing</li>
     </tradeTags>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Armadillo/Armadillo</wornGraphicPath>
       <layers>
         <li>Middle</li>
       </layers>
       <tags>
+      <li>RDRApparel</li>
+      <li>Western</li>
       <li>IndustrialBasic</li>
-      <li>IndustrialAdvanced</li>
       </tags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
-        <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
    <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-  <!-- ========== Overalls ========== -->
+  <!--Overalls-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_FarmerOveralls</defName>
     <label>Overalls</label>
@@ -1405,16 +1465,19 @@
       <texPath>Things/Pawn/Humanlike/Apparel/FarmerOveralls/FarmerOveralls</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <techLevel>Industrial</techLevel>
     <costStuffCount>75</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
     <statBases>
+    <!--nothing special here-->
+    <StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.60</StuffEffectMultiplierInsulation_Heat>
       <MaxHitPoints>120</MaxHitPoints>
-      <WorkToMake>4800</WorkToMake>
-      <Mass>0.8</Mass>
+      <WorkToMake>5800</WorkToMake>
+      <Mass>1.2</Mass>
       <EquipDelay>1.5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
@@ -1424,35 +1487,37 @@
       <li>Apparel</li>
     </thingCategories>
     <tradeTags>
-      <li>Clothing</li>
+      <li>ComplexClothing</li>
     </tradeTags>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/FarmerOveralls/FarmerOveralls</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Middle</li>
       </layers>
       <tags>
+      <li>Western</li>
+      <li>RDRApparel</li>
       <li>IndustrialBasic</li>
-      <li>IndustrialAdvanced</li>
       </tags>
     </apparel>
     <recipeMaker>
-    <skillRequirements>
-    <Crafting>5</Crafting>
-    </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
-        <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
    <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-  <!-- ========== Dalton ========== -->
+
+  <!--Dalton-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_Dalton</defName>
     <label>Dalton</label>
@@ -1461,12 +1526,11 @@
       <texPath>Things/Pawn/Humanlike/Apparel/Dalton/Dalton</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <techLevel>Industrial</techLevel>
     <costStuffCount>75</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
       <WorkToMake>4800</WorkToMake>
@@ -1483,36 +1547,40 @@
       <li>Apparel</li>
     </thingCategories>
     <tradeTags>
-      <li>Clothing</li>
+      <li>ComplexClothing</li>
     </tradeTags>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Dalton/Dalton</wornGraphicPath>
       <useWornGraphicMask>true</useWornGraphicMask>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>OnSkin</li>
       </layers>
       <tags>
-        <li>IndustrialAdvanced</li>
+        <li>RDRApparel</li>
+        <li>Western</li>
         <li>IndustrialBasic</li>
       </tags>
     </apparel>
     <recipeMaker>
-    <skillRequirements>
-    <Crafting>6</Crafting>
-    </skillRequirements>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
-        <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
    <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-<!-- ========== Frontiersman ========== -->
+
+<!--Frontiersman-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_Frontiersman</defName>
     <label>Frontiersman Outfit</label>
@@ -1528,17 +1596,18 @@
     </stuffCategories>
     <tradeability>Sellable</tradeability>
     <statBases>
+    <!-- A little better than the dalton -->
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToMake>4800</WorkToMake>
       <Mass>0.69</Mass>
-      <StuffEffectMultiplierArmor>0.28</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.62</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.58</StuffEffectMultiplierInsulation_Heat>
+      <StuffEffectMultiplierArmor>0.52</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>1.5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-    <GeneralLaborSpeed>0.5</GeneralLaborSpeed>
-    <BondAnimalChanceFactor>0.5</BondAnimalChanceFactor>
+    <!--Im not even sure if this works-->
+    <GeneralLaborSpeed>0.10</GeneralLaborSpeed>
     </equippedStatOffsets>
     <thingCategories>
       <li>Apparel</li>
@@ -1549,33 +1618,35 @@
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Frontiersman/Frontiersman</wornGraphicPath>
       <useWornGraphicMask>true</useWornGraphicMask>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>OnSkin</li>
       </layers>
       <tags>
+      <li>RDRApparel</li>
+      <li>Western</li>
       <li>IndustrialBasic</li>
-      <li>IndustrialAdvanced</li>
       </tags>
     </apparel>
     <recipeMaker>
-    <skillRequirements>
-    <Crafting>6</Crafting>
-    </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
-        <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
    <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-<!-- ============== OUTER =============== --> 
+<!--Shell-->
 
-<!-- ========== Marshal Duster ========== -->
+<!--Marshal Duster-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_MarshalDuster</defName>
     <label>Marshal Duster</label>
@@ -1583,26 +1654,28 @@
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/MarshalDuster/MarshalDuster</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.05</drawSize>
+      <drawSize>1.25</drawSize>
     </graphicData>
-    <techLevel>Industrial</techLevel>
-    <costStuffCount>80</costStuffCount>
+    <costStuffCount>150</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
     <statBases>
+    <!--slightly better flak vest-->
+      <WorkToMake>9000</WorkToMake>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>8000</WorkToMake>
-      <Mass>1.5</Mass>
-      <StuffEffectMultiplierArmor>0.45</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>1</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>2</StuffEffectMultiplierInsulation_Heat>
+      <Mass>4</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>1.10</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.36</ArmorRating_Blunt>
+      <ArmorRating_Heat>2.1</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
       <EquipDelay>2</EquipDelay>
     </statBases>
     <equippedStatOffsets>
     <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
-    <ArrestSuccessChance>1</ArrestSuccessChance>
+    <ArrestSuccessChance>50</ArrestSuccessChance>
     </equippedStatOffsets>
     <thingCategories>
       <li>Apparel</li>
@@ -1617,19 +1690,19 @@
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/MarshalDuster/MarshalDuster</wornGraphicPath>
       <shellRenderedBehindHead>True</shellRenderedBehindHead>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Shell</li>
       </layers>
       <tags>
-        <li>IndustrialAdvanced</li>
-        <li>IndustrialBasic</li>
+        <li>RDRLawmen</li>
       </tags>
       <defaultOutfitTags>
-        <li>Worker</li>
         <li>Soldier</li>
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
     <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
@@ -1642,7 +1715,8 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
     </ThingDef>
 
-<!-- ========== Dusty Duster ========== -->
+
+<!--Dusty Duster-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_DustyDuster</defName>
     <label>Dusty Duster</label>
@@ -1652,24 +1726,26 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.5</drawSize>
     </graphicData>
-    <techLevel>Industrial</techLevel>
     <costStuffCount>150</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
     <statBases>
+    <!--A lighter version of the marshal duster with great heat defense-->
+      <WorkToMake>8000</WorkToMake>
       <MaxHitPoints>180</MaxHitPoints>
-      <WorkToMake>6800</WorkToMake>
-      <Mass>1.5</Mass>
-      <StuffEffectMultiplierArmor>0.50</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>2.00</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>1.5</EquipDelay>
+      <Mass>3</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>1</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.56</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>2</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-    <RangedWeapon_Cooldown>-0.10</RangedWeapon_Cooldown>
+    <RangedWeapon_Cooldown>-0.3</RangedWeapon_Cooldown>
     <CaravanRidingSpeedFactor>0.10</CaravanRidingSpeedFactor>
     </equippedStatOffsets>
     <thingCategories>
@@ -1685,12 +1761,14 @@
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/DustyDuster/DustyDuster</wornGraphicPath>
       <shellRenderedBehindHead>True</shellRenderedBehindHead>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Shell</li>
       </layers>
       <tags>
-        <li>IndustrialAdvanced</li>
+        <li>RDRApparel</li>
         <li>IndustrialBasic</li>
+        <li>RDRSheriff</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
@@ -1698,6 +1776,7 @@
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
     <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
@@ -1709,11 +1788,11 @@
     </recipeMaker>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
     <tradeTags>
-      <li>BasicClothing</li>
+      <li>ComplexClothing</li>
     </tradeTags>
     </ThingDef>
 
-    <!-- ========== Rugged Duster ========== -->
+    <!--Rugged Duster-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_RuggedDuster</defName>
     <label>Rugged Duster</label>
@@ -1723,21 +1802,21 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.5</drawSize>
     </graphicData>
-    <techLevel>Industrial</techLevel>
     <costStuffCount>150</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
     <statBases>
+    <!--A little better than a vanilla duster-->
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>8000</WorkToMake>
-      <Mass>1.5</Mass>
-      <StuffEffectMultiplierArmor>0.45</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>2.00</StuffEffectMultiplierInsulation_Heat>
-      <EquipDelay>1.5</EquipDelay>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <CaravanRidingSpeedFactor>0.50</CaravanRidingSpeedFactor>
@@ -1754,12 +1833,15 @@
         <li>Legs</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/RuggedDuster/RuggedDuster</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Shell</li>
       </layers>
       <tags>
-        <li>IndustrialAdvanced</li>
         <li>IndustrialBasic</li>
+        <li>Western</li>
+        <li>RDRApparel</li>
+        <li>RDRLawmen</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
@@ -1767,9 +1849,7 @@
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
-    <skillRequirements>
-        <Crafting>7</Crafting>
-      </skillRequirements>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
       <displayPriority>220</displayPriority>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
@@ -1778,13 +1858,12 @@
     </recipeMaker>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
     <tradeTags>
-      <li>BasicClothing</li>
+      <li>ComplexClothing</li>
     </tradeTags>
     </ThingDef>
 
 
-
-      <!-- ========== RedCliff ========== -->
+  <!--RedCliff-->
     <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_RedCliff</defName>
     <label>Red Cliff</label>
@@ -1794,25 +1873,28 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.5</drawSize>
     </graphicData>
-    <techLevel>Industrial</techLevel>
-    <costStuffCount>100</costStuffCount>
+    <costStuffCount>130</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
     <costList>
       <Steel>50</Steel>
     </costList>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
+    <tradeTags>
+      <li>ComplexClothing</li>
+    </tradeTags>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToMake>5800</WorkToMake>
       <Mass>1.5</Mass>
       <StuffEffectMultiplierArmor>0.45</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.10</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>1.5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
+    <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
       <SocialImpact>0.50</SocialImpact>
     </equippedStatOffsets>
     <thingCategories>
@@ -1823,23 +1905,23 @@
         <li>Torso</li>
         <li>Neck</li>
         <li>Shoulders</li>
-        <li>Arms</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/RedCliff/RedCliff</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Middle</li>
         <li>OnSkin</li>
       </layers>
       <tags>
-        <li>IndustrialAdvanced</li>
+        <li>RDRApparel</li>
+        <li>Western</li>
         <li>IndustrialBasic</li>
       </tags>
-      <defaultOutfitTags>
-      </defaultOutfitTags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
     <skillRequirements>
-        <Crafting>6</Crafting>
+        <Crafting>5</Crafting>
       </skillRequirements>
       <displayPriority>220</displayPriority>
       <recipeUsers>
@@ -1848,17 +1930,14 @@
       </recipeUsers>
     </recipeMaker>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
-    <tradeTags>
-      <li>BasicClothing</li>
-    </tradeTags>
     </ThingDef>
 
 
-    <!-- ========== Grizzly========== -->
+    <!--Grizzly-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_Grizzly</defName>
     <label>Grizzly</label>
-    <description>Inspired by the mighty bear, this outfit combines rugged durability with fierce style. Perfect for those who dominate the wilderness with strength and confidence.</description>
+    <description>crafted from the resources of the mighty legendary bear, this outfit combines rugged durability with fierce style. Perfect for those who dominate the wilderness with strength and confidence.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/Grizzly/Grizzly</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1868,7 +1947,9 @@
     <costStuffCount>80</costStuffCount>
     <stuffCategories>
       <li>Leathery</li>
+      <li>Fabric</li>
     </stuffCategories>
+    <tradeability>Sellable</tradeability>
     <costList>
       <RDR_LegendaryBearPelt>30</RDR_LegendaryBearPelt>
     </costList>
@@ -1876,18 +1957,20 @@
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>18000</WorkToMake>
       <Mass>1.8</Mass>
+      <!-- equivalent to a mechlord suit but slightly better-->
       <StuffEffectMultiplierArmor>0.12</StuffEffectMultiplierArmor>
-      <ArmorRating_Blunt>1</ArmorRating_Blunt>
-      <ArmorRating_Sharp>1</ArmorRating_Sharp>
-      <StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>1.0</StuffEffectMultiplierInsulation_Heat>
+      <ArmorRating_Sharp>1.12</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.32</ArmorRating_Heat>
+      <StuffEffectMultiplierInsulation_Cold>2.1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>2.5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
+    <!--What a beautiful coat sir-->
    <Beauty>5</Beauty>
    <MeleeHitChance>0.5</MeleeHitChance>
    <SellPriceFactor>0.25</SellPriceFactor>
-   <MeleeWeapon_CooldownMultiplier>0.2</MeleeWeapon_CooldownMultiplier>
     </equippedStatOffsets>
     <thingCategories>
       <li>Apparel</li>
@@ -1901,18 +1984,19 @@
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Grizzly/Grizzly</wornGraphicPath>
       <shellRenderedBehindHead>true</shellRenderedBehindHead>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Shell</li>
       </layers>
       <tags>
-        <li>IndustrialBasic</li>
+        <li>RDR_LegendaryGear</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
-        <li>Worker</li>
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
     <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>
@@ -1925,10 +2009,8 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
-
-  <!-- ========== Pinkerton Detective ========== -->
   
-
+ <!--Pinkerton Detective-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_PinkertonDetective</defName>
     <label>PinkertonDetective</label>
@@ -1938,17 +2020,18 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.00</drawSize>
     </graphicData>
-    <techLevel>Industrial</techLevel>
-    <costStuffCount>120</costStuffCount>
+    <costStuffCount>130</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
+    <tradeability>None</tradeability>
     <statBases>
+    <!--sneaky sneaky pinkys-->
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>8000</WorkToMake>
+      <WorkToMake>15000</WorkToMake>
       <Mass>2</Mass>
       <StuffEffectMultiplierArmor>0.50</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
       <StuffEffectMultiplierInsulation_Heat>1</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>1.5</EquipDelay>
     </statBases>
@@ -1969,13 +2052,13 @@
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PinkertonDetective/PinkertonDetective</wornGraphicPath>
       <useWornGraphicMask>true</useWornGraphicMask>
       <shellRenderedBehindHead>True</shellRenderedBehindHead>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
         <li>Shell</li>
         <li>OnSkin</li>
       </layers>
       <tags>
-        <li>IndustrialAdvanced</li>
-        <li>IndustrialBasic</li>
+        <li>RDRLawmen</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
@@ -1983,8 +2066,9 @@
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
     <skillRequirements>
-        <Crafting>10</Crafting>
+        <Crafting>8</Crafting>
       </skillRequirements>
       <displayPriority>220</displayPriority>
       <recipeUsers>
@@ -1995,7 +2079,8 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
     </ThingDef>
 
-    <!-- ========== Pinkerton Deputy ========== -->
+
+    <!--Pinkerton Deputy-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>RDR_PinkertonDeputy</defName>
     <label>PinkertonDeputy</label>
@@ -2006,14 +2091,13 @@
       <shaderType>CutoutComplex</shaderType>
       <drawSize>1.0</drawSize>
     </graphicData>
-    <techLevel>Industrial</techLevel>
     <costStuffCount>150</costStuffCount>
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
     <statBases>
       <MaxHitPoints>150</MaxHitPoints>
-      <WorkToMake>8000</WorkToMake>
+      <WorkToMake>10000</WorkToMake>
       <Mass>1.5</Mass>
       <StuffEffectMultiplierArmor>0.50</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Cold>1</StuffEffectMultiplierInsulation_Cold>
@@ -2021,7 +2105,7 @@
       <EquipDelay>1.5</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-<PainShockThreshold>0.5</PainShockThreshold>
+<PainShockThreshold>0.10</PainShockThreshold>
     </equippedStatOffsets>
     <thingCategories>
       <li>Apparel</li>
@@ -2036,21 +2120,21 @@
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/PinkertonDeputy/PinkertonDeputy</wornGraphicPath>
       <useWornGraphicMask>true</useWornGraphicMask>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <layers>
-        <li>Middle</li>
+        <li>OnSkin</li>
       </layers>
       <tags>
-        <li>IndustrialAdvanced</li>
-        <li>IndustrialBasic</li>
+        <li>RDRLawmen</li>
       </tags>
       <defaultOutfitTags>
-        <li>Worker</li>
         <li>Soldier</li>
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
     <skillRequirements>
-        <Crafting>10</Crafting>
+        <Crafting>8</Crafting>
       </skillRequirements>
       <displayPriority>220</displayPriority>
       <recipeUsers>
