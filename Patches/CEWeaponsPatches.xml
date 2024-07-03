@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <!-- Double Barrel Shotgun -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>RDR_DoubleBarrelShotgun</defName>
+                <statBases>
+                    <Mass>3.0</Mass>
+                    <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1.0</SightsEfficiency>
+                    <ShotSpread>0.13</ShotSpread>
+                    <SwayFactor>1.25</SwayFactor>
+                    <Bulk>7.5</Bulk>
+                </statBases>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <warmupTime>0.6</warmupTime>
+                    <range>16</range>
+                    <soundCast>RDR_ShotgunShot</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>2</magazineSize>
+                    <reloadTime>3.3</reloadTime>
+                    <ammoSet>AmmoSet_12Gauge</ammoSet>
+                </AmmoUser>
+                <FireModes />
+                <weaponTags>
+                    <li>CE_AI_Rifle</li>
+                </weaponTags>
+            </li>
+
+            <!-- Sawed Off Shotgun -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>RDR_SawedOffShotgun</defName>
+                <statBases>
+                    <Mass>2.0</Mass>
+                    <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <ShotSpread>0.16</ShotSpread>
+                    <SwayFactor>0.78</SwayFactor>
+                    <Bulk>6</Bulk>
+                </statBases>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <warmupTime>0.6</warmupTime>
+                    <range>15</range>
+                    <burstShotCount>2</burstShotCount>
+                    <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                    <soundCast>RDR_SawedOffShot</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>2</magazineSize>
+                    <reloadTime>2.5</reloadTime>
+                    <ammoSet>AmmoSet_12Gauge</ammoSet>
+                </AmmoUser>
+                <FireModes />
+                <weaponTags>
+                    <li>CE_AI_AssaultWeapon</li>
+                </weaponTags>
+            </li>
+
+            <!-- Evans Repeater -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>RDR_EvansRepeater</defName>
+                <statBases>
+                    <Mass>3.0</Mass>
+                    <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1.00</SightsEfficiency>
+                    <ShotSpread>0.02</ShotSpread>
+                    <SwayFactor>1.40</SwayFactor>
+                    <Bulk>9.50</Bulk>
+                </statBases>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <warmupTime>0.6</warmupTime>
+                    <range>35</range>
+                    <soundCast>RDR_RepeaterShot</soundCast>
+                    <soundCastTail>GunTail_Heavy</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>15</magazineSize>
+                    <reloadTime>4.9</reloadTime>
+                    <ammoSet>AmmoSet_30Carbine</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiAimMode>AimedShot</aiAimMode>
+                </FireModes>
+                <weaponTags>
+                    <li>CE_AI_Rifle</li>
+                </weaponTags>
+            </li>
+
+            <!-- Springfield Rifle -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>RDR_SpringfieldRifle</defName>
+                <statBases>
+                    <Mass>4.0</Mass>
+                    <RangedWeapon_Cooldown>1.17</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1.00</SightsEfficiency>
+                    <ShotSpread>0.01</ShotSpread>
+                    <SwayFactor>1.53</SwayFactor>
+                    <Bulk>13.50</Bulk>
+                </statBases>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <warmupTime>1.3</warmupTime>
+                    <range>45</range>
+                    <soundCast>RDR_SpringfieldRifleShot</soundCast>
+                    <soundCastTail>GunTail_Heavy</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>1</magazineSize>
+                    <reloadTime>1.6</reloadTime>
+                    <ammoSet>AmmoSet_3006Springfield</ammoSet>
+                </AmmoUser>
+                <FireModes>
+                    <aiAimMode>AimedShot</aiAimMode>
+                </FireModes>
+                <weaponTags>
+                    <li>CE_AI_Rifle</li>
+                </weaponTags>
+            </li>
+
+            <!-- Lemat Revolver -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>RDR_LematRevolver</defName>
+                <statBases>
+                    <Mass>1.3</Mass>
+                    <RangedWeapon_Cooldown>0.41</RangedWeapon_Cooldown>
+                    <SightsEfficiency>0.70</SightsEfficiency>
+                    <ShotSpread>0.17</ShotSpread>
+                    <SwayFactor>0.82</SwayFactor>
+                    <Bulk>2.52</Bulk>
+                </statBases>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <warmupTime>0.6</warmupTime>
+                    <range>28</range>
+                    <soundCast>RDR_RevolverShot</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>9</magazineSize>
+                    <reloadTime>3.6</reloadTime>
+                    <ammoSet>AmmoSet_FastMusketBall</ammoSet>
+                </AmmoUser>
+                <FireModes />
+            </li>
+
+            <!-- Navy Revolver -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>RDR_NavyRevolver</defName>
+                <statBases>
+                    <Mass>1.2</Mass>
+                    <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                    <SightsEfficiency>0.70</SightsEfficiency>
+                    <ShotSpread>0.16</ShotSpread>
+                    <SwayFactor>0.69</SwayFactor>
+                    <Bulk>2.15</Bulk>
+                </statBases>
+                <Properties>
+                    <recoilAmount>1.86</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <warmupTime>0.6</warmupTime>
+                    <range>20</range>
+                    <soundCast>RDR_RevolverShot</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>6</magazineSize>
+                    <reloadTime>3</reloadTime>
+                    <ammoSet>AmmoSet_FastMusketBall</ammoSet>
+                </AmmoUser>
+                <FireModes />
+            </li>
+
+            <!-- Volcanic Pistol -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>RDR_VolcanicPistol</defName>
+                <statBases>
+                    <Mass>1.2</Mass>
+                    <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                    <SightsEfficiency>0.70</SightsEfficiency>
+                    <ShotSpread>0.17</ShotSpread>
+                    <SwayFactor>0.82</SwayFactor>
+                    <Bulk>3.10</Bulk>
+                </statBases>
+                <Properties>
+                    <recoilAmount>1.82</recoilAmount>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <warmupTime>0.6</warmupTime>
+                    <range>20</range>
+                    <soundCast>RDR_VolcanicShot</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>8</magazineSize>
+                    <reloadTime>4</reloadTime>
+                    <ammoSet>AmmoSet_45Colt</ammoSet>
+                </AmmoUser>
+                <FireModes />
+            </li>
+
+            <!-- Mauser Pistol -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>RDR_MauserPistol</defName>
+                <statBases>
+                    <Mass>1.0</Mass>
+                    <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    <SightsEfficiency>0.70</SightsEfficiency>
+                    <ShotSpread>0.17</ShotSpread>
+                    <SwayFactor>0.82</SwayFactor>
+                    <Bulk>2.72</Bulk>
+                </statBases>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <warmupTime>0.6</warmupTime>
+                    <range>20</range>
+                    <soundCast>RDR_MauserShot</soundCast>
+                    <soundCastTail>GunTail_Light</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>10</magazineSize>
+                    <reloadTime>4</reloadTime>
+                    <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+                </AmmoUser>
+                <FireModes />
+            </li>
+
+            <!-- Rare Shotgun -->
+            <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <defName>RDR_RareShotgun</defName>
+                <statBases>
+                    <Mass>3.5</Mass>
+                    <RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown>
+                    <SightsEfficiency>1</SightsEfficiency>
+                    <ShotSpread>0.13</ShotSpread>
+                    <SwayFactor>0.89</SwayFactor>
+                    <Bulk>7.7</Bulk>
+                </statBases>
+                <Properties>
+                    <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                    <hasStandardCommand>true</hasStandardCommand>
+                    <warmupTime>0.6</warmupTime>
+                    <range>16</range>
+                    <soundCast>RDR_ShotgunShot</soundCast>
+                    <soundCastTail>GunTail_Heavy</soundCastTail>
+                    <muzzleFlashScale>9</muzzleFlashScale>
+                </Properties>
+                <AmmoUser>
+                    <magazineSize>6</magazineSize>
+                    <reloadTime>4.9</reloadTime>
+                    <ammoSet>AmmoSet_12Gauge</ammoSet>
+                </AmmoUser>
+                <FireModes />
+                <weaponTags>
+                    <li>CE_AI_AssaultWeapon</li>
+                </weaponTags>
+            </li>
+
+            <!-- Double Barrel Shotgun -->
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="RDR_DoubleBarrelShotgun"]/tools</xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>stock</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>8</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <chanceFactor>1.5</chanceFactor>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>barrel</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>5</power>
+                            <cooldownTime>2.02</cooldownTime>
+                            <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>muzzle</label>
+                            <capacities>
+                                <li>Poke</li>
+                            </capacities>
+                            <power>8</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                        </li>
+                    </tools>
+                </value>
+            </li>
+
+            <!-- Sawed Off Shotgun -->
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="RDR_SawedOffShotgun"]/tools</xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>stock</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>4</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <chanceFactor>1.5</chanceFactor>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>barrel</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>4</power>
+                            <cooldownTime>2.02</cooldownTime>
+                            <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>muzzle</label>
+                            <capacities>
+                                <li>Poke</li>
+                            </capacities>
+                            <power>4</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                        </li>
+                    </tools>
+                </value>
+            </li>
+
+            <!-- Evans Repeater -->
+            <!-- Springfield Rifle -->
+            <!-- Rare Shotgun -->
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="RDR_EvansRepeater" or defName="RDR_SpringfieldRifle"
+                    or defName="RDR_RareShotgun"]/tools</xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>stock</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>8</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <chanceFactor>1.5</chanceFactor>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>barrel</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>5</power>
+                            <cooldownTime>2.02</cooldownTime>
+                            <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>muzzle</label>
+                            <capacities>
+                                <li>Poke</li>
+                            </capacities>
+                            <power>8</power>
+                            <cooldownTime>1.55</cooldownTime>
+                            <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                        </li>
+                    </tools>
+                </value>
+            </li>
+
+            <!-- Lemat Revolver -->
+            <!-- Navy Revolver -->
+            <!-- Volcanic Pistol -->
+            <!-- Mauser Pistol -->
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="RDR_LematRevolver" or defName="RDR_NavyRevolver" or
+                    defName="RDR_VolcanicPistol" or defName="RDR_MauserPistol"]/tools</xpath>
+                <value>
+                    <tools>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>grip</label>
+                            <capacities>
+                                <li>Blunt</li>
+                            </capacities>
+                            <power>2</power>
+                            <cooldownTime>1.54</cooldownTime>
+                            <chanceFactor>1.5</chanceFactor>
+                            <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                        </li>
+                        <li Class="CombatExtended.ToolCE">
+                            <label>muzzle</label>
+                            <capacities>
+                                <li>Poke</li>
+                            </capacities>
+                            <power>2</power>
+                            <cooldownTime>1.54</cooldownTime>
+                            <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                            <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                        </li>
+                    </tools>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

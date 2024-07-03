@@ -10,7 +10,7 @@
     <drawSize>(1.0, 1.0)</drawSize>
   </graphicData>
   <statBases>
-    <MarketValue>25</MarketValue>
+    <MarketValue>250</MarketValue>
     <Mass>0.8</Mass>
   </statBases>
   <thingCategories>
