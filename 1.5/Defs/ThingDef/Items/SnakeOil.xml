@@ -7,7 +7,7 @@ It will take about three seconds to drink the Snake Oil, but the dead eye meter 
         <tradeability>Sellable</tradeability>
         <tickerType>Rare</tickerType>
         <statBases>
-            <MarketValue>350</MarketValue>
+            <MarketValue>150</MarketValue>
             <Mass>0.3</Mass>
         </statBases>
         <graphicData>
