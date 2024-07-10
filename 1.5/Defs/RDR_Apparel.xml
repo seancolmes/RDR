@@ -2,6 +2,204 @@
 
 <Defs>
 
+
+<!--
+<ThingDef ParentName="ApparelMakeableBase">
+    <defName>RDR_Unshaken</defName>
+    <label>Unshaken</label>
+    <description>This belonged to an an outlaw with quite the reputation. Enjoy its status</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Unshaken/Unshaken</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <costStuffCount>75</costStuffCount>
+    <stuffCategories>
+    <li>Fabric</li>
+    <li>Leathery</li>
+    </stuffCategories>
+    <tradeability>All</tradeability>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>16000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.85</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+      <CaravanRidingSpeedFactor>0.10</CaravanRidingSpeedFactor>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Clothing</li>
+    </tradeTags>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Unshaken/Unshaken</wornGraphicPath>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>RDR_Ponchos</li>
+        <li>IndustrialBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>-->
+
+<!--Unshaken Vest
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>RDR_UnshakenVest</defName>
+    <label>Unshaken Vest</label>
+    <description>Stylish and comfortable. From the famous outlaw, now you enjoy its comfort.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/UnshakenVest/UnshakenVest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <costStuffCount>75</costStuffCount>
+    <stuffCategories>
+    <li>Fabric</li>
+    <li>Leathery</li>
+    </stuffCategories>
+    <tradeability>All</tradeability>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>16000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.85</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+      <CaravanRidingSpeedFactor>0.10</CaravanRidingSpeedFactor>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Clothing</li>
+    </tradeTags>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/UnshakenVest/UnshakenVest</wornGraphicPath>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>RDR_Ponchos</li>
+        <li>IndustrialBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>-->
+
+  <!--Unshaken Hat
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>RDR_UnshakenHat</defName>
+    <label>Unshaken Hat</label>
+    <description>Part of an outlaw uniform</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/UnshakenHat/UnshakenHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costList>
+      <Plasteel>25</Plasteel>
+    </costList>
+    <tradeability>None</tradeability>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>1.2</Mass>
+      <StuffEffectMultiplierArmor>0.6</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.10</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <ArrestSuccessChance>0.5</ArrestSuccessChance>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/UnshakenHat/UnshakenHat</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>IndustrialBasic</li>
+      </tags>
+    </apparel>
+    <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef> -->
+
+
+
 <!--Ponchos-->
 
 <!--Dustrider-->
@@ -143,9 +341,6 @@
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>8</Crafting>
-      </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -215,9 +410,6 @@
       </defaultOutfitTags>
     </apparel>
     <recipeMaker>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -278,9 +470,6 @@
     </apparel>
     <recipeMaker>
     <researchPrerequisite>ComplexClothing</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -465,9 +654,6 @@
     </apparel>
     <recipeMaker>
     <researchPrerequisite>ComplexClothing</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>6</Crafting>
-      </skillRequirements>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
@@ -1110,8 +1296,8 @@
       <EquipDelay>2.2</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <RangedCooldownFactor>-0.8</RangedCooldownFactor>
-      <AimingDelayFactor>0.2</AimingDelayFactor>
+      <RangedCooldownFactor>-0.08</RangedCooldownFactor>
+      <AimingDelayFactor>-0.2</AimingDelayFactor>
     </equippedStatOffsets>
     <thingCategories>
       <li>ApparelUtility</li>
@@ -1438,7 +1624,7 @@
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Armadillo/Armadillo</wornGraphicPath>
       <layers>
-        <li>Middle</li>
+        <li>OnSkin</li>
       </layers>
       <tags>
       <li>RDRApparel</li>
@@ -1703,9 +1889,6 @@
     </apparel>
     <recipeMaker>
     <researchPrerequisite>ComplexClothing</researchPrerequisite>
-    <skillRequirements>
-        <Crafting>8</Crafting>
-      </skillRequirements>
       <displayPriority>220</displayPriority>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
@@ -1777,9 +1960,6 @@
     </apparel>
     <recipeMaker>
     <researchPrerequisite>ComplexClothing</researchPrerequisite>
-    <skillRequirements>
-        <Crafting>8</Crafting>
-      </skillRequirements>
       <displayPriority>220</displayPriority>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
@@ -1920,9 +2100,6 @@
     </apparel>
     <recipeMaker>
     <researchPrerequisite>ComplexClothing</researchPrerequisite>
-    <skillRequirements>
-        <Crafting>5</Crafting>
-      </skillRequirements>
       <displayPriority>220</displayPriority>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
@@ -2068,7 +2245,7 @@
     <recipeMaker>
     <researchPrerequisite>ComplexClothing</researchPrerequisite>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>5</Crafting>
       </skillRequirements>
       <displayPriority>220</displayPriority>
       <recipeUsers>
@@ -2134,7 +2311,7 @@
     <recipeMaker>
     <researchPrerequisite>ComplexClothing</researchPrerequisite>
     <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>5</Crafting>
       </skillRequirements>
       <displayPriority>220</displayPriority>
       <recipeUsers>
