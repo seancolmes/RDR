@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="RDR_LegendaryBearPelt"]/statBases</xpath>
+		<value>
+			<StuffPower_Armor_Blunt>0.30</StuffPower_Armor_Blunt>
+		</value>
+	</Operation>
+
+	
+</Patch>
