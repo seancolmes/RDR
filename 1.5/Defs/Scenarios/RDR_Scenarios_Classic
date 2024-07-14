@@ -13,13 +13,13 @@
       </playerFaction>
       <parts>
 
-        <!-- Config pages -->
+        <!-- 1Pawn count start -->
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
           <def>ConfigPage_ConfigureStartingPawns</def>
           <pawnCount>1</pawnCount>
         </li>
 
-        <!-- Player starting stuff spawn method-->
+        <!-- Pawn arrival-->
         <li Class="ScenPart_PlayerPawnsArriveMethod">
           <def>PlayerPawnsArriveMethod</def>
           <method>Standing</method>
@@ -68,7 +68,7 @@
 				<count>1</count>
 			  </li>
 
-        <!-- Scatter some things near player start -->
+        <!-- Wood & Steel -->
         <li Class="ScenPart_ScatterThingsNearPlayerStart">
           <def>ScatterThingsNearPlayerStart</def>
           <thingDef>Steel</thingDef>
@@ -107,10 +107,10 @@
 				<stat>CaravanRidingSpeedFactor</stat>
 				<factor>0.05</factor>
 			</li>
-        
+        <!--Descriptor-->
         <li Class="ScenPart_GameStartDialog">
 				<def>GameStartDialog</def>
-				<text>You start with very little research and few supplies. Can you survive what the frontier will throw at you? Only time will tell ...</text>
+				<text>You begin your journey with scant resources and minimal knowledge. Can you withstand the trials of the untamed frontier? Only time will reveal your fate...</text>
 			</li>
 
       </parts>
