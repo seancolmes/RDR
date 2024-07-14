@@ -2,8 +2,8 @@
 <Defs>
 
   <ScenarioDef>
-    <defName>AmbitiousCowboys</defName>
-    <label>Ambitious Cowboys</label>
+    <defName>AmbitiousCowboy</defName>
+    <label>Ambitious Cowboy</label>
     <description>You have discovered the perfect spot to stake your claim and build a homestead in this vast, untamed land. Here, you will forge a legacy that echoes across the great prairies and endless oceans. Will your name endure through the ages, becoming legend in this new frontier?</description>
     <scenario>
       <summary>There is nothing more important to a cowboy than his reputation. Stake your claim in this untouched land.</summary>
