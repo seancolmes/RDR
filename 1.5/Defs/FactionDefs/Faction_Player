@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>PlayerCowboyColony</defName>
+    <label>Cowboys</label>
+    <description>Your own community of Cowboys.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Colonist_Cowboy</basicMemberKind>
+    <pawnSingular>Cowboy</pawnSingular>
+    <pawnsPlural>Cowboys</pawnsPlural>
+    <factionNameMaker>RDR_PioneerNamer</factionNameMaker>
+    <settlementNameMaker>RDR_PioneerNamer</settlementNameMaker>
+    <techLevel>Industrial</techLevel>
+	<allowedCultures>
+			<li>Rustican</li>
+		</allowedCultures>
+	<rescueesCanJoin>true</rescueesCanJoin>
+    <backstoryFilters>
+			<li>
+				<categories>
+					<li>Outlander</li>
+ 	  				<li>Offworld</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+    <factionIconPath>World/WorldObjects/Cowboys</factionIconPath>
+    <startingResearchTags>
+      <!--<li>TribalStart</li>-->
+    </startingResearchTags>   	
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>  
+  
+
+</Defs>
