@@ -6,7 +6,7 @@
     <label>Cowboys</label>
     <description>Your own community of Cowboys.</description>
     <isPlayer>true</isPlayer>
-    <basicMemberKind>Colonist_Cowboy</basicMemberKind>
+    <basicMemberKind>Cowboy_Colonist</basicMemberKind>
     <pawnSingular>Cowboy</pawnSingular>
     <pawnsPlural>Cowboys</pawnsPlural>
     <factionNameMaker>RDR_PioneerNamer</factionNameMaker>
