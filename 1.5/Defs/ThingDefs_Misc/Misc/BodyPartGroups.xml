@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <BodyPartGroupDef>
+    <defName>RDR_Torso</defName>
+    <label>torso</label>
+    <listOrder>120</listOrder>
+  </BodyPartGroupDef>
+  
+
+</Defs>
