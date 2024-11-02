@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
+
+  
+
 <ThingDef ParentName="ResourceBase">
   <defName>RDR_LegendaryBearPelt</defName>
   <label>Legendary Bear Pelt</label>
@@ -8,10 +12,19 @@
     <texPath>Things/Item/Resource/LegendaryBearPelt</texPath>
     <graphicClass>Graphic_Single</graphicClass>
     <drawSize>(1.0, 1.0)</drawSize>
+    <shaderType>CutoutComplex</shaderType>
   </graphicData>
   <statBases>
-    <MarketValue>250</MarketValue>
-    <Mass>0.8</Mass>
+  <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.6</Flammability>
+      <DeteriorationRate>3</DeteriorationRate>
+      <StuffPower_Armor_Sharp>1.81</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.36</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.21</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>0.91</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+    <MarketValue>80</MarketValue>
+    <Mass>1.5</Mass>
   </statBases>
   <thingCategories>
     <li>ResourcesRaw</li>
@@ -19,14 +32,16 @@
   <tradeTags>
     <li>AnimalProduct</li>
     <li>Leather</li>
+    <li>ExoticMisc</li>
   </tradeTags>
   <stuffProps>
     <categories>
       <li>Leathery</li>
     </categories>
+    <color>(96,56,19)</color>
     <statOffsets>
     </statOffsets>
   </stuffProps>
 </ThingDef>
 
-</Defs>
+  </Defs>
