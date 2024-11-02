@@ -9,8 +9,10 @@
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/DoubleBarrelShotgun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.2</drawSize>
+			<drawSize>1.10</drawSize>
 		</graphicData>
+		<equippedAngleOffset>25</equippedAngleOffset>
+		 <equippedDistanceOffset>-0.10</equippedDistanceOffset>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<statBases>
 			<WorkToMake>10000</WorkToMake>
@@ -30,7 +32,8 @@
 		</weaponTags>
 		<costList>
 			<Steel>80</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<WoodLog>50</WoodLog>
 		</costList>
 		<recipeMaker>
 		<researchPrerequisite>Gunsmithing</researchPrerequisite>
@@ -38,7 +41,7 @@
 				<li>TableMachining</li>
 			</recipeUsers>
 			<skillRequirements>
-				<Crafting>5</Crafting>
+				<Crafting>7</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<verbs>
@@ -83,11 +86,12 @@
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.10</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>20</damageAmountBase>
-      <speed>55</speed>
+      <damageAmountBase>30</damageAmountBase>
+      <speed>91</speed>
     </projectile>
   </ThingDef>
 
@@ -100,8 +104,10 @@
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/SawedOffShotgun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1</drawSize>
+			<drawSize>1.10</drawSize>
 		</graphicData>
+		<equippedAngleOffset>20</equippedAngleOffset>
+		<equippedDistanceOffset>-0.20</equippedDistanceOffset>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<statBases>
 			<WorkToMake>9000</WorkToMake>
@@ -121,7 +127,8 @@
 		</weaponTags>
 		<costList>
 			<Steel>80</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentIndustrial>3</ComponentIndustrial>
+			<WoodLog>50</WoodLog>
 		</costList>
 		<recipeMaker>
 			<recipeUsers Inherit="False">
@@ -140,7 +147,7 @@
 				<warmupTime>2.0</warmupTime>
 				<burstShotCount>2</burstShotCount>
 				<ticksBetweenBurstShots>150</ticksBetweenBurstShots>
-				<range>15</range>
+				<range>14</range>
 				<soundCast>RDR_SawedOffShot</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
@@ -178,31 +185,34 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>21</damageAmountBase>
+      <damageAmountBase>23</damageAmountBase>
       <speed>74</speed>
     </projectile>
   </ThingDef>
 
 
-	<!-- Evans Repeater -->
+	<!-- Evans Repeater. USE THIS AS BASE FOR RIFLES -->
 	<ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>RDR_EvansRepeater</defName>
 		<label>Evans Repeater Rifle</label>
-		<description>For when you want to keep the lead flying and your enemies dying. Reloading is just a suggestion."</description>
+		<description>For when you want to keep the lead flying and your enemies dying. Reloading is just a suggestion.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/EvansRepeater</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.10</drawSize>
 		</graphicData>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		 <equippedDistanceOffset>-0.10</equippedDistanceOffset>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<statBases>
 		<!--Great medium range shots-->
 			<WorkToMake>18000</WorkToMake>
-			<Mass>2.0</Mass>
+			<Mass>2.5</Mass>
 			<AccuracyTouch>0.71</AccuracyTouch>
-			<AccuracyShort>0.71</AccuracyShort>
-			<AccuracyMedium>0.91</AccuracyMedium>
-			<AccuracyLong>0.81</AccuracyLong>
-			<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+			<AccuracyShort>0.88</AccuracyShort>
+			<AccuracyMedium>0.96</AccuracyMedium>
+			<AccuracyLong>0.80</AccuracyLong>
+			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponClasses>
 			<li>LongShots</li>
@@ -213,16 +223,17 @@
 			<li>Gun</li>
 		</weaponTags>
 		<costList>
-			<Steel>80</Steel>
-			<ComponentIndustrial>2</ComponentIndustrial>
-		</costList>
+			<Steel>100</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<WoodLog>50</WoodLog>
+			</costList>
 		<recipeMaker>
 			<recipeUsers Inherit="False">
 				<li>TableMachining</li>
 			</recipeUsers>
 			<researchPrerequisite>Gunsmithing</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>4</Crafting>
+				<Crafting>7</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<verbs>
@@ -230,10 +241,10 @@
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>RDR_Bullet_EvansRepeater</defaultProjectile>
-				<warmupTime>0.9</warmupTime>
+				<warmupTime>0.8</warmupTime>
 				<burstShotCount>1</burstShotCount>
 				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
-				<range>35</range>
+				<range>38</range>
 				<soundCast>RDR_RepeaterShot</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
@@ -270,11 +281,12 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>14</damageAmountBase>
-      <speed>65</speed>
+      <damageAmountBase>18</damageAmountBase>
+      <speed>75</speed>
     </projectile>
   </ThingDef>
-
+  
+<!--SpringField Rifle-->
   <ThingDef ParentName="BaseHumanMakeableGun">
 		<defName>RDR_SpringfieldRifle</defName>
 		<label>Springfield Rifle</label>
@@ -282,7 +294,10 @@
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/SpringfieldRifle</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.10</drawSize>
 		</graphicData>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		 <equippedDistanceOffset>-0.10</equippedDistanceOffset>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<statBases>
 			<WorkToMake>22000</WorkToMake>
@@ -290,7 +305,7 @@
 			<AccuracyTouch>0.50</AccuracyTouch>
 			<AccuracyShort>0.68</AccuracyShort>
 			<AccuracyMedium>0.72</AccuracyMedium>
-			<AccuracyLong>0.81</AccuracyLong>
+			<AccuracyLong>0.94</AccuracyLong>
 			<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
 		</statBases>
 		<weaponClasses>
@@ -304,6 +319,7 @@
 		<costList>
 			<Steel>150</Steel>
 			<ComponentIndustrial>3</ComponentIndustrial>
+			<WoodLog>50</WoodLog>
 		</costList>
 		<recipeMaker>
 			<recipeUsers Inherit="False">
@@ -322,7 +338,7 @@
 				<warmupTime>0.9</warmupTime>
 				<burstShotCount>1</burstShotCount>
 				<ticksBetweenBurstShots>300</ticksBetweenBurstShots>
-				<range>45</range>
+				<range>48</range>
 				<soundCast>RDR_SpringfieldRifleShot</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
@@ -361,7 +377,7 @@
 	<!--Fly baby fly-->
       <damageDef>Bullet</damageDef>
       <damageAmountBase>22</damageAmountBase>
-      <speed>81</speed>
+      <speed>88</speed>
 	  <stoppingPower>1.5</stoppingPower>
     </projectile>
   </ThingDef>
@@ -376,6 +392,7 @@
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/LematRevolver</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.10</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Revolver</soundInteract>
 		<statBases>
@@ -398,6 +415,7 @@
 		<costList>
 			<Steel>60</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
+			<WoodLog>25</WoodLog>
 		</costList>
 		<recipeMaker>
 			<recipeUsers Inherit="False">
@@ -405,7 +423,7 @@
 			</recipeUsers>
 			<researchPrerequisite>Gunsmithing</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>5</Crafting>
+				<Crafting>6</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 		<verbs>
@@ -414,7 +432,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_Revolver</defaultProjectile>
 				<warmupTime>1.0</warmupTime>
-				<range>28</range>
+				<range>22</range>
 				<soundCast>RDR_RevolverShot</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
@@ -452,7 +470,7 @@
     <projectile>
       <damageDef>Bullet</damageDef>
       <damageAmountBase>14</damageAmountBase>
-      <speed>77</speed>
+      <speed>80</speed>
     </projectile>
   </ThingDef>
 
@@ -464,7 +482,7 @@
 		<label>Navy Revolver</label>
 		<description>Smooth, reliable, and ready for action. It’s like having a fleet in your hand, but much more stylish.</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/LematRevolver</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/NavyRevolver</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_Revolver</soundInteract>
@@ -485,8 +503,9 @@
 			<li>RDRWeapons</li>
 		</weaponTags>
 		<costList>
-			<Steel>60</Steel>
+			<Steel>50</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
+			<WoodLog>25</WoodLog>
 		</costList>
 		<recipeMaker>
 			<recipeUsers Inherit="False">
@@ -541,8 +560,8 @@
     <projectile>
       <damageDef>Bullet</damageDef>
 	  <!--a tiny bit better than its counterpart-->
-      <damageAmountBase>13</damageAmountBase>
-      <speed>78</speed>
+      <damageAmountBase>14</damageAmountBase>
+      <speed>81</speed>
     </projectile>
   </ThingDef>
 
@@ -641,7 +660,7 @@
 		<label>Mauser Pistol</label>
 		<description>Precision engineered to make your enemies feel underdressed."</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/LematRevolver</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/MauserPistol</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_Revolver</soundInteract>
@@ -664,6 +683,7 @@
 		<costList>
 			<Steel>50</Steel>
 			<ComponentIndustrial>2</ComponentIndustrial>
+			<WoodLog>25</WoodLog>
 		</costList>
 		<recipeMaker>
 			<recipeUsers Inherit="False">
@@ -718,7 +738,7 @@
     <projectile>
       <damageDef>Bullet</damageDef>
       <damageAmountBase>13</damageAmountBase>
-      <speed>62</speed>
+      <speed>75</speed>
     </projectile>
   </ThingDef>
 
@@ -733,8 +753,8 @@
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/RareShotgun</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1</drawSize>
 		</graphicData>
+		<equippedAngleOffset>40</equippedAngleOffset>	
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<statBases>
 		<!--youll want to fight closer with this-->
@@ -755,7 +775,8 @@
 		</weaponTags>
 		<costList>
 			<Steel>100</Steel>
-			<ComponentIndustrial>3</ComponentIndustrial>
+			<ComponentIndustrial>5</ComponentIndustrial>
+			<WoodLog>75</WoodLog>
 		</costList>
 		<recipeMaker>
 			<recipeUsers Inherit="False">
@@ -811,11 +832,106 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>23</damageAmountBase>
+      <damageAmountBase>25</damageAmountBase>
       <speed>91</speed>
     </projectile>
   </ThingDef>
 
+<!--Nitro Rifle-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>RDR_NitroExpressRifle</defName>
+		<label>Nitro Express Rifle</label>
+		<description>For those that believe close quarters combat is for the foolhardy and indeed short lived</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/NitroExpressRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.15</drawSize>
+		</graphicData>
+		<equippedAngleOffset>40</equippedAngleOffset>
+		 <equippedDistanceOffset>-0.10</equippedDistanceOffset>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<statBases>
+			<WorkToMake>25000</WorkToMake>
+			<Mass>2.2</Mass>
+			<AccuracyTouch>0.50</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.98</AccuracyLong>
+			<RangedWeapon_Cooldown>3.8</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponClasses>
+			<li>LongShots</li>
+			<li>RangedHeavy</li>
+		</weaponClasses>
+		<weaponTags>
+			<li>RDRWeapons</li>
+			<li>Gun</li>
+		</weaponTags>
+		<costList>
+			<Steel>150</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<WoodLog>60</WoodLog>
+		</costList>
+		<recipeMaker>
+			<recipeUsers Inherit="False">
+				<li>TableMachining</li>
+			</recipeUsers>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RDR_Bullet_NitroExpressRifle</defaultProjectile>
+				<warmupTime>0.9</warmupTime>
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>300</ticksBetweenBurstShots>
+				<range>95</range>
+				<soundCast>RDR_SpringfieldRifleShot</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+
+<!-- NitroExpressRifle Bullet -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>RDR_Bullet_NitroExpressRifle</defName>
+     <label>Nitro Express Rifle Bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+	<!--Long range sluggers-->
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <speed>97</speed>
+	  <stoppingPower>2.0</stoppingPower>
+    </projectile>
+  </ThingDef>
 
 	
 </Defs>
