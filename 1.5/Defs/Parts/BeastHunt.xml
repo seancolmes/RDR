@@ -24,4 +24,29 @@
     </genStep>
   </GenStepDef>
 
+   <!-- Legendary Wolf Hunt -->
+  <SitePartDef>
+    <defName>RDR_LegendaryWolfHunt</defName>
+    <label>legendary Wolf hunt</label>
+    <description>A Legendary Wolf has been sighted here. It will stay there for the foreseeable future but move on in time.</description>
+    <siteTexture>World/WorldObjects/Sites/GenericSite</siteTexture>
+    <expandingIconTexture>UI/Hunt_LegendaryWolf</expandingIconTexture>
+    <handlesWorldObjectTimeoutInspectString>true</handlesWorldObjectTimeoutInspectString>
+    <tags>
+      <li>RDR_LegendaryWolfHunt</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>RDR_LegendaryWolfHuntGen</defName>
+    <linkWithSite>RDR_LegendaryWolfHunt</linkWithSite>
+    <order>400</order>
+    <genStep Class="RimRedRedemption.MapGeneration.LegendaryHunts.GenStep_LegendaryWolf">
+      <count>1</count>
+      <nearMapCenter>true</nearMapCenter>
+    </genStep>
+  </GenStepDef>
+
+  
+
 </Defs>
