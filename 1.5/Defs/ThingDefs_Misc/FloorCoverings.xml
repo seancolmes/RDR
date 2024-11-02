@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<ThingDef ParentName="BuildingFloorCoveringMediumBase">
+    <defName>LegendaryBear_Rug</defName>
+    <label>LegendaryBear Rug</label>
+    <description>Reap the warm rewards of your biggest kill.</description>
+    <dominantStyleCategory>Rustic</dominantStyleCategory>
+    <statBases>
+      <Flammability>0.32</Flammability>
+    </statBases>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/FloorCoverings/LegendaryBearRug</texPath>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <useIdeoColor>true</useIdeoColor>
+    </building>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+    <costList>
+      <RDR_LegendaryBearPelt>75</RDR_LegendaryBearPelt>
+    </costList>
+  </ThingDef>
+
+  </Defs>
