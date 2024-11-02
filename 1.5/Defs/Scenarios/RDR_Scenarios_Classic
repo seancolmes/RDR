@@ -4,28 +4,27 @@
   <ScenarioDef>
     <defName>AmbitiousCowboy</defName>
     <label>Ambitious Cowboy</label>
-    <description>You have discovered the perfect spot to stake your claim and build a homestead in this vast, untamed land. Here, you will forge a legacy that echoes across the great prairies and endless oceans. Will your name endure through the ages, becoming legend in this new frontier?</description>
+    <description>You have discovered what looks to be an old inn. You decide to wait to see if anyone comes by and if they don't? well ... lets just see what happens.</description>
     <scenario>
-      <summary>There is nothing more important to a cowboy than his reputation. Stake your claim in this untouched land.</summary>
+      <summary>There is nothing more important to a cowboy than his reputation.</summary>
       <playerFaction>
         <def>PlayerFaction</def>
         <factionDef>PlayerCowboyColony</factionDef>
       </playerFaction>
       <parts>
 
-        <!-- 1Pawn count start -->
+      <!-- Config pages -->
         <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
           <def>ConfigPage_ConfigureStartingPawns</def>
           <pawnCount>1</pawnCount>
+          <pawnChoiceCount>1</pawnChoiceCount>
         </li>
-
         <!-- Pawn arrival-->
         <li Class="ScenPart_PlayerPawnsArriveMethod">
           <def>PlayerPawnsArriveMethod</def>
           <method>Standing</method>
-          <visible>true</visible>
+          <visible>false</visible>
         </li>
-        
         <!-- Player starting things -->
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
@@ -34,8 +33,8 @@
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
-          <thingDef>Hay</thingDef>
-          <count>200</count>
+          <thingDef>RDR_SnakeOil</thingDef>
+          <count>2</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
@@ -44,17 +43,33 @@
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
-          <thingDef>Pemmican</thingDef>
+          <thingDef>Hay</thingDef>
           <count>200</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
+          <thingDef>WoodLog</thingDef>
+          <count>750</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Steel</thingDef>
+          <count>500</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
+          <thingDef>Pemmican</thingDef>
+          <count>750</count>
+        </li>
+        <li Class="ScenPart_StartingThing_Defined">
+          <def>StartingThing_Defined</def>
           <thingDef>MedicineHerbal</thingDef>
-          <count>20</count>
+          <count>25</count>
         </li>
         <li Class="ScenPart_StartingThing_Defined">
           <def>StartingThing_Defined</def>
           <thingDef>RDR_EvansRepeater</thingDef>
+          <count>2</count>
         </li>
         <li Class="ScenPart_StartingAnimal">
           <def>StartingAnimal</def>
@@ -65,53 +80,17 @@
         <li Class="ScenPart_StartingAnimal">
 				<def>StartingAnimal</def>
 				<animalKind>Horse</animalKind>
-				<count>1</count>
+				<count>2</count>
 			  </li>
-
-        <!-- Wood & Steel -->
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
-          <thingDef>Steel</thingDef>
-          <count>250</count>
-        </li>
-        <li Class="ScenPart_ScatterThingsNearPlayerStart">
-          <def>ScatterThingsNearPlayerStart</def>
-          <thingDef>WoodLog</thingDef>
-          <count>250</count>
-        </li>      
-
-        <!-- Scatter some things anywhere -->
-        <li Class="ScenPart_ScatterThingsAnywhere">
-          <def>ScatterThingsAnywhere</def>
-          <thingDef>WoodLog</thingDef>
-          <count>250</count>
-        </li>
-
-        <!--Force the dead eye trait-->
-        <li Class="ScenPart_ForcedTrait">
-				<def>ForcedTrait</def>
-				<chance>1</chance>
-				<context>PlayerStarter</context>
-				<trait>RDR_DeadEye_Trait</trait>
-			</li>
-
-        <!--You are a young cowboy, not an old one-->
-			<li Class="ScenPart_PawnFilter_Age">
-				<def>PawnFilter_Age</def>
-				<allowedAgeRange>18~25</allowedAgeRange>
-			</li>
-
-        <!-- You are a trailblazing cowboy, not some pioneering pilgrim-->
-      <li Class="ScenPart_StatFactor">
-				<def>StatFactor</def>
-				<stat>CaravanRidingSpeedFactor</stat>
-				<factor>0.05</factor>
-			</li>
-        <!--Descriptor-->
-        <li Class="ScenPart_GameStartDialog">
-				<def>GameStartDialog</def>
-				<text>You begin your journey with scant resources and minimal knowledge. Can you withstand the trials of the untamed frontier? Only time will reveal your fate...</text>
-			</li>
+        
+<li Class="KCSG.ScenPart_AddStartingStructure">
+  <def>VFEC_AddStartingStructure</def>
+  <structureLabel>An Abandoned bar</structureLabel>
+  <nearMapCenter>True</nearMapCenter>
+  <chooseFrom>
+    <li>RDR_Valentine</li>
+  </chooseFrom>
+</li>
 
       </parts>
     </scenario>
