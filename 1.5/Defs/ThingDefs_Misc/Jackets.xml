@@ -18,7 +18,6 @@
     </stuffCategories>
      <costList>
       <Leather_Plain>75</Leather_Plain>
-      <Steel>25</Steel>
     </costList>
     <statBases>
     <!--slightly better flak vest-->
@@ -29,8 +28,8 @@
       <ArmorRating_Sharp>1.10</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.36</ArmorRating_Blunt>
       <ArmorRating_Heat>2.1</ArmorRating_Heat>
-      <Insulation_Cold>1</Insulation_Cold>
-      <Insulation_Heat>1.5</Insulation_Heat>
+      <StuffEffectMultiplierInsulation_Cold>0.60</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.95</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>2</EquipDelay>
     </statBases>
     <equippedStatOffsets>
@@ -88,7 +87,6 @@
     </stuffCategories>
     <costList>
     <Leather_Plain>75</Leather_Plain>
-    <WoolBison>25</WoolBison>
     </costList>
     <tradeability>All</tradeability>
     <statBases>
@@ -100,7 +98,10 @@
       <ArmorRating_Sharp>1</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
       <ArmorRating_Heat>1.56</ArmorRating_Heat>
-      <Insulation_Cold>1</Insulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1.0</StuffEffectMultiplierInsulation_Heat>
+      <StuffEffectMultiplierInsulation_Cold>0.56</StuffEffectMultiplierInsulation_Cold>
+      <Insulation_Cold>1.0</Insulation_Cold>
+      <Insulation_Heat>1.0</Insulation_Heat>
       <EquipDelay>2</EquipDelay>
     </statBases>
     <equippedStatOffsets>
@@ -357,6 +358,84 @@
         <li>Arms</li>
       </bodyPartGroups>
       <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Grizzly/Grizzly</wornGraphicPath>
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
+      <useWornGraphicMask>True</useWornGraphicMask>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>RDR_LegendaryGear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <displayPriority>220</displayPriority>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+
+  <!--Legendary Wolf Coat-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>RDR_WolfCoat</defName>
+    <label>Wolf Coat</label>
+    <description>Crafted from the resources of the mighty legendary Wolf, this outfit combines rugged durability with fierce style. Perfect for those who dominate the wilderness with strength and confidence.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/LegendaryWolfCoat/LegendaryWolfCoat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
+    </graphicData>
+    <costStuffCount>75</costStuffCount>
+    <stuffCategories>
+      <li>Leathery</li>
+      <li>Fabric</li>
+    </stuffCategories>
+    <tradeability>Sellable</tradeability>
+    <costList>
+      <RDR_LegendaryWolfPelt>30</RDR_LegendaryWolfPelt>
+    </costList>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>1.8</Mass>
+      <!-- equivalent to a mechlord suit but slightly better-->
+      <StuffEffectMultiplierArmor>0.50</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>1.12</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.32</ArmorRating_Heat>
+      <StuffEffectMultiplierInsulation_Cold>2.1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    <!--What a beautiful coat sir-->
+   <Beauty>5</Beauty>
+   <MeleeHitChance>0.5</MeleeHitChance>
+   <SellPriceFactor>0.25</SellPriceFactor>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/LegendaryWolfCoat/LegendaryWolfCoat</wornGraphicPath>
       <shellRenderedBehindHead>true</shellRenderedBehindHead>
       <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
       <useWornGraphicMask>True</useWornGraphicMask>
