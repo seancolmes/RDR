@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   
 
@@ -11,7 +11,7 @@
       <texPath>Things/Pawn/Humanlike/Apparel/Bandolier/BandolierPouch</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <onGroundRandomRotateAngle>10</onGroundRandomRotateAngle>
-      <drawSize>1.0</drawSize>
+      <drawSize>1.5</drawSize>
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <possessionCount>1</possessionCount>
@@ -159,6 +159,7 @@
     <stuffCategories>
     </stuffCategories>
     <tradeability>None</tradeability>
+    <generateCommonality>0.0</generateCommonality>
     <statBases>
       <MaxHitPoints>125</MaxHitPoints>
       <Mass>1</Mass>
