@@ -3,7 +3,7 @@
 
 
   <BodyPartGroupDef>
-    <defName>RDR_Torso</defName>
+    <defName>RDR_Torso</defName><!-- For colorable purposes -->
     <label>torso</label>
     <listOrder>120</listOrder>
   </BodyPartGroupDef>
