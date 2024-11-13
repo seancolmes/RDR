@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+
+<!--Legendary Bear-->
   <QuestScriptDef>
     <defName>RDR_LegendaryBearHunt</defName>
     <rootSelectionWeight>0</rootSelectionWeight>
@@ -169,7 +172,7 @@
     </questNameRules>
     <questDescriptionRules>
       <rulesStrings>
-        <li>questDescription(askerIsNull==true)->We've intercepted messages about the location of a Legendary Wolf rest place near [map_definite]. It will stay there for the foreseeable future but move on in time. You can use this moment to hunt it for its precious pelt and rare meat.\n\nA gigantic, deadly Wolf covered in scars from its years as king of the forest. The Legendary Wolf is aggressive by nature and extremely dangerous when enraged. Its fur and hide are incredibly resistant to damage and cold, while its razor-sharp claws and teeth can pierce even the best armor.\n\nLegends say that these Wolfs are the result of ancient genetic experiments, creating the ultimate apex predator of the forest.</li>
+        <li>questDescription(askerIsNull==true)->There has been talks of a Huge wolf lurking nearby. [map_definite]. It will stay there for the foreseeable future but move on in time. You can use this moment to hunt it for its precious pelt and rare meat.\n\nA gigantic, deadly Wolf covered in scars from its years roaming these lands. The Legendary Wolf is aggressive by nature and extremely dangerous when enraged. Its fur and hide are incredibly resistant to damage and cold, while its razor-sharp claws and teeth can pierce even the best armor.\n\nLegends say that these Wolfs are the result of ancient genetic experiments, creating the ultimate apex predator of the forest.</li>
 
         <li>questDescription->[asker_nameDef], [asker_faction_leaderTitle] of [asker_faction_name] has reports of spotting a Legendary Wolf nearby. While they don't plan on hunting the beast themselves, they're challenging you to hunt it. Should you be successful, they will give the following reward to you. It will stay there for the foreseeable future but move on in time. You can use this moment to hunt it for its precious pelt and rare meat, or try to tame it if you dare.\n\nA gigantic, deadly Wolf covered in scars from its years as king of the forest. The Legendary Wolf is aggressive by nature and extremely dangerous when enraged. Its fur and hide are incredibly resistant to damage and cold, while its razor-sharp claws and teeth can pierce even the best armor.\n\nLegends say that these Wolfs are the result of ancient genetic experiments, creating the ultimate apex predator of the forest.</li>
       </rulesStrings>
@@ -306,4 +309,6 @@
       </nodes>
     </root>
   </QuestScriptDef>
+
+
 </Defs>
