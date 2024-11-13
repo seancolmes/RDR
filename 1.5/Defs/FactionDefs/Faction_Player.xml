@@ -11,7 +11,7 @@
     <pawnsPlural>Cowboys</pawnsPlural>
     <factionNameMaker>RDR_PioneerNamer</factionNameMaker>
     <settlementNameMaker>RDR_PioneerNamer</settlementNameMaker>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Medieval</techLevel>
 	<allowedCultures>
 			<li>Rustican</li>
 		</allowedCultures>
