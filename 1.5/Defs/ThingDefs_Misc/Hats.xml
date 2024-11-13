@@ -544,6 +544,68 @@
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
+   <!--Legendary Wolf Hat-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>RDR_WolfHat</defName>
+    <label>Wolf Hat</label>
+    <description>Crafted from the toughest hide the frontier has to offer. Wear it with pride and intimidate even the bravest outlaws.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/LegendaryWolfHat/LegendaryWolfHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <tradeability>Sellable</tradeability>
+    <costList>
+      <RDR_LegendaryWolfPelt>30</RDR_LegendaryWolfPelt>
+    </costList>
+    <statBases>
+    <!--Basically a recon helmet with better insulation-->
+      <WorkToMake>21000</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>1</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.50</SocialImpact>
+      <MentalBreakThreshold>0.15</MentalBreakThreshold>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/LegendaryWolfHat/LegendaryWolfHat</wornGraphicPath>
+      <canBeGeneratedToSatisfyWarmth>True</canBeGeneratedToSatisfyWarmth>
+      <useWornGraphicMask>True</useWornGraphicMask>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>RDR_LegendaryGear</li>
+      </tags>
+    </apparel>
+    <recipeMaker>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+
 
 <!--Bandana-->
   <ThingDef ParentName="HatMakeableBase">
