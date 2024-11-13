@@ -21,6 +21,7 @@
     </thingCategories>
     <tradeTags>
     </tradeTags>
+    <generateCommonality>0.0</generateCommonality>
     <statBases>
     <!--nothing special here-->
        <MaxHitPoints>150</MaxHitPoints>
@@ -84,6 +85,7 @@
       <Mass>0.07</Mass>
       <EquipDelay>0.8</EquipDelay>
     </statBases>
+    <generateCommonality>0</generateCommonality>
     <equippedStatOffsets>
     </equippedStatOffsets>
     <apparel>
