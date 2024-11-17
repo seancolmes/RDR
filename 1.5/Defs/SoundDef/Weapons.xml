@@ -12,7 +12,7 @@
                     </li>
                 </grains>
                 <volumeRange>100</volumeRange>
-                <distRange>10~30</distRange>
+                <distRange>10~40</distRange>
             </li>
         </subSounds>
     </SoundDef>
@@ -30,7 +30,7 @@
                     </li>
                 </grains>
                 <volumeRange>100</volumeRange>
-                <distRange>10~30</distRange>
+                <distRange>10~25</distRange>
             </li>
         </subSounds>
     </SoundDef>
@@ -48,7 +48,7 @@
                     </li>
                 </grains>
                 <volumeRange>100</volumeRange>
-                <distRange>10~30</distRange>
+                <distRange>10~45</distRange>
             </li>
         </subSounds>
     </SoundDef>
@@ -85,7 +85,7 @@
                     </li>
                 </grains>
                 <volumeRange>100</volumeRange>
-                <distRange>10~30</distRange>
+                <distRange>10~40</distRange>
             </li>
         </subSounds>
     </SoundDef>
@@ -103,7 +103,7 @@
                     </li>
                 </grains>
                 <volumeRange>100</volumeRange>
-                <distRange>10~30</distRange>
+                <distRange>10~50</distRange>
             </li>
         </subSounds>
     </SoundDef>
@@ -121,7 +121,25 @@
                     </li>
                 </grains>
                 <volumeRange>100</volumeRange>
-                <distRange>10~30</distRange>
+                <distRange>10~40</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>RDR_NitroRifleShot</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <muteWhenPaused>false</muteWhenPaused>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>RDR/RDR_NitroRifle</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>100</volumeRange>
+                <distRange>10~40</distRange>
             </li>
         </subSounds>
     </SoundDef>
